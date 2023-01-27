@@ -34,13 +34,11 @@ use Sylius\Component\Resource\Symfony\Request\State\Provider;
             template: 'book/create.html.twig',
             provider: Provider::class,
             responder: BookCreationResponder::class,
-            formType: BookType::class,
         ),
         new Update(
             template: 'book/update.html.twig',
             provider: Provider::class,
             responder: BookEditionResponder::class,
-            formType: BookType::class,
         ),
         new Delete(
             provider: Provider::class,
