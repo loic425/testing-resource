@@ -16,7 +16,7 @@
         "sensio/framework-extra-bundle": "^6.1",
         "sylius/ui": "dev-main",
         "sylius/ui-bundle": "^1.12",
-        "sylius/resource-bundle": "dev-feature/item-provider",
+        "sylius/resource-bundle": "dev-feature/placeholder-action",
         "symfony/asset": "6.1.*",
         "symfony/console": "6.1.*",
         "symfony/doctrine-messenger": "6.1.*",

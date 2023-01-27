@@ -3,12 +3,14 @@
 namespace App\Entity;
 
 use App\Repository\BookRepository;
+use App\State\Responder\BookResponder;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Sylius\Component\Resource\Metadata\Index;
 use Sylius\Component\Resource\Metadata\Resource;
 use Sylius\Component\Resource\Metadata\Show;
 use Sylius\Component\Resource\Model\ResourceInterface;
+use Sylius\Component\Resource\Symfony\Request\State\ItemProvider;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
 #[Resource(
@@ -16,7 +18,12 @@ use Sylius\Component\Resource\Model\ResourceInterface;
     section: 'admin',
     operations: [
         new Index(template: 'book/index.html.twig'),
-        new Show(template: 'book/show.html.twig'),
+        new Show(
+            template: 'book/show.html.twig',
+            provider: ItemProvider::class,
+            responder: BookResponder::class,
+            repository: 'app.repository.book',
+        ),
     ],
 )]
 class Book implements ResourceInterface

@@ -1,5 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    test
+    <h1>{{ book.name }}</h1>
+
+    <h2>Author</h2>
+    <p>{{ book.author }}</p>
+
+    <h2>Description</h2>
+    <p>{{ book.description|default('')|nl2br }}</p>
 {% endblock %}

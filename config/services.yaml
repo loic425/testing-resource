@@ -7,6 +7,14 @@ parameters:
     locale: 'en'
 
 services:
+    _instanceof:
+        Sylius\Component\Resource\Repository\RepositoryInterface:
+            tags: ['sylius.repository']
+        Sylius\Component\Resource\State\ProviderInterface:
+            tags: ['sylius.state_provider']
+        Sylius\Component\Resource\State\ResponderInterface:
+            tags: ['sylius.state_responder']
+
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
@@ -23,3 +31,30 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    Sylius\Component\Resource\Context\Initiator\RequestContextInitiator: null
+
+    Sylius\Component\Resource\Metadata\Operation\HttpOperationInitiator: null
+
+    Sylius\Component\Resource\State\Provider:
+        $locator: !tagged_locator { tag: 'sylius.state_provider' }
+    Sylius\Component\Resource\State\ProviderInterface: '@Sylius\Component\Resource\State\Provider'
+
+    Sylius\Component\Resource\State\Responder:
+        $locator: !tagged_locator { tag: 'sylius.state_responder' }
+    Sylius\Component\Resource\State\ResponderInterface: '@Sylius\Component\Resource\State\Responder'
+
+    Sylius\Component\Resource\Symfony\EventListener\ReadListener:
+        tags: [{ name: 'kernel.event_listener', event: 'kernel.request' }]
+
+    Sylius\Component\Resource\Symfony\EventListener\RespondListener:
+        tags: [{ name: 'kernel.event_listener', event: 'kernel.view' }]
+
+    Sylius\Component\Resource\Symfony\Request\RepositoryArgumentResolver: null
+
+    Sylius\Component\Resource\Symfony\Request\State\ItemProvider:
+        arguments:
+            $locator: !tagged_locator { tag: 'sylius.repository' }
+
+    app.repository.book:
+        class: App\Repository\BookRepository

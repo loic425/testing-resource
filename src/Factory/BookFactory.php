@@ -47,8 +47,9 @@ final class BookFactory extends ModelFactory
     protected function getDefaults(): array
     {
         return [
-            'author' => self::faker()->text(255),
-            'name' => self::faker()->text(255),
+            'author' => self::faker()->name(),
+            'name' => self::faker()->words(3, true),
+            'description' => self::faker()->paragraphs(3, true),
         ];
     }
 

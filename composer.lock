@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e2d514fd8ea5cd6f4b0720cc622a5a3",
+    "content-hash": "307d46fe62391f3e85e04ee1f860421c",
     "packages": [
         {
             "name": "babdev/pagerfanta-bundle",
@@ -3738,16 +3738,16 @@
         },
         {
             "name": "sylius/resource-bundle",
-            "version": "dev-feature/item-provider",
+            "version": "dev-feature/placeholder-action",
             "source": {
                 "type": "git",
                 "url": "https://github.com/loic425/SyliusResourceBundle.git",
-                "reference": "ad46d50cadc236c06f72d4eeecb6a9f2751217b2"
+                "reference": "54ad40292ea40b054816745262ff3179a49cea9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/ad46d50cadc236c06f72d4eeecb6a9f2751217b2",
-                "reference": "ad46d50cadc236c06f72d4eeecb6a9f2751217b2",
+                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/54ad40292ea40b054816745262ff3179a49cea9d",
+                "reference": "54ad40292ea40b054816745262ff3179a49cea9d",
                 "shasum": ""
             },
             "require": {
@@ -3865,9 +3865,9 @@
                 "sylius"
             ],
             "support": {
-                "source": "https://github.com/loic425/SyliusResourceBundle/tree/feature/item-provider"
+                "source": "https://github.com/loic425/SyliusResourceBundle/tree/feature/placeholder-action"
             },
-            "time": "2023-01-27T09:43:38+00:00"
+            "time": "2023-01-27T10:47:09+00:00"
         },
         {
             "name": "sylius/ui",
