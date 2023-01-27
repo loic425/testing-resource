@@ -50,8 +50,14 @@ services:
     Sylius\Component\Resource\Symfony\EventListener\ReadListener:
         tags: [{ name: 'kernel.event_listener', event: 'kernel.request' }]
 
+    Sylius\Component\Resource\Symfony\EventListener\FormListener:
+        tags: [ { name: 'kernel.event_listener', event: 'kernel.view' } ]
+
     Sylius\Component\Resource\Symfony\EventListener\RespondListener:
         tags: [{ name: 'kernel.event_listener', event: 'kernel.view' }]
+
+    Sylius\Component\Resource\Symfony\Form\Factory\FormFactory: null
+    Sylius\Component\Resource\Symfony\Form\Factory\FormFactoryInterface: '@Sylius\Component\Resource\Symfony\Form\Factory\FormFactory'
 
     Sylius\Component\Resource\Symfony\Request\RepositoryArgumentResolver: null
 

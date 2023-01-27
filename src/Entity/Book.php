@@ -2,14 +2,21 @@
 
 namespace App\Entity;
 
+use App\Form\BookType;
 use App\Repository\BookRepository;
 use App\State\Responder\BookCollectionResponder;
+use App\State\Responder\BookCreationResponder;
+use App\State\Responder\BookDeleteResponder;
+use App\State\Responder\BookEditionResponder;
 use App\State\Responder\BookItemResponder;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Sylius\Component\Resource\Metadata\Create;
+use Sylius\Component\Resource\Metadata\Delete;
 use Sylius\Component\Resource\Metadata\Index;
 use Sylius\Component\Resource\Metadata\Resource;
 use Sylius\Component\Resource\Metadata\Show;
+use Sylius\Component\Resource\Metadata\Update;
 use Sylius\Component\Resource\Model\ResourceInterface;
 use Sylius\Component\Resource\Symfony\Request\State\Provider;
 
@@ -22,6 +29,25 @@ use Sylius\Component\Resource\Symfony\Request\State\Provider;
             template: 'book/index.html.twig',
             provider: Provider::class,
             responder: BookCollectionResponder::class,
+            repository: 'app.repository.book',
+        ),
+        new Create(
+            template: 'book/create.html.twig',
+            provider: Provider::class,
+            responder: BookCreationResponder::class,
+            repository: 'app.repository.book',
+            formType: BookType::class,
+        ),
+        new Update(
+            template: 'book/update.html.twig',
+            provider: Provider::class,
+            responder: BookEditionResponder::class,
+            repository: 'app.repository.book',
+            formType: BookType::class,
+        ),
+        new Delete(
+            provider: Provider::class,
+            responder: BookDeleteResponder::class,
             repository: 'app.repository.book',
         ),
         new Show(
