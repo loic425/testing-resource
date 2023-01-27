@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}
+    {{ book.name }}
+{% endblock %}
+
 {% block body %}
     <h1>{{ book.name }}</h1>
 
