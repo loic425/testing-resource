@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\EventSubscriber;
 
+use Pagerfanta\Pagerfanta;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
@@ -14,6 +15,10 @@ class SetCurrentPageSubscriber implements EventSubscriberInterface
     {
         $request = $event->getRequest();
         $data = $request->attributes->get('data');
+
+        if (!$data instanceof Pagerfanta) {
+            return;
+        }
 
         $data->setCurrentPage($request->query->getInt('page', 1));
     }
