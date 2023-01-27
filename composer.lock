@@ -3793,12 +3793,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/loic425/SyliusResourceBundle.git",
-                "reference": "c68f0f0f106f9780f062262ae5a2b2a7a2d60afa"
+                "reference": "58148dc0cfece7abc570a4e8c6e2c32dc964bf45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/c68f0f0f106f9780f062262ae5a2b2a7a2d60afa",
-                "reference": "c68f0f0f106f9780f062262ae5a2b2a7a2d60afa",
+                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/58148dc0cfece7abc570a4e8c6e2c32dc964bf45",
+                "reference": "58148dc0cfece7abc570a4e8c6e2c32dc964bf45",
                 "shasum": ""
             },
             "require": {
@@ -3918,7 +3918,7 @@
             "support": {
                 "source": "https://github.com/loic425/SyliusResourceBundle/tree/feature/placeholder-action"
             },
-            "time": "2023-01-27T12:52:54+00:00"
+            "time": "2023-01-27T13:04:58+00:00"
         },
         {
             "name": "sylius/ui",

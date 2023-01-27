@@ -3,7 +3,6 @@
 namespace App\Entity;
 
 use App\Repository\BookRepository;
-use App\State\Provider\CollectionProvider;
 use App\State\Responder\BookCollectionResponder;
 use App\State\Responder\BookItemResponder;
 use Doctrine\DBAL\Types\Types;
@@ -12,7 +11,7 @@ use Sylius\Component\Resource\Metadata\Index;
 use Sylius\Component\Resource\Metadata\Resource;
 use Sylius\Component\Resource\Metadata\Show;
 use Sylius\Component\Resource\Model\ResourceInterface;
-use Sylius\Component\Resource\Symfony\Request\State\ItemProvider;
+use Sylius\Component\Resource\Symfony\Request\State\Provider;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
 #[Resource(
@@ -21,13 +20,13 @@ use Sylius\Component\Resource\Symfony\Request\State\ItemProvider;
     operations: [
         new Index(
             template: 'book/index.html.twig',
-            provider: CollectionProvider::class,
+            provider: Provider::class,
             responder: BookCollectionResponder::class,
             repository: 'app.repository.book',
         ),
         new Show(
             template: 'book/show.html.twig',
-            provider: ItemProvider::class,
+            provider: Provider::class,
             responder: BookItemResponder::class,
             repository: 'app.repository.book',
         ),

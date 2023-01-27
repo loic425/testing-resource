@@ -8,6 +8,7 @@
             <tr>
                 <th>Name</th>
                 <th>Author</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -15,6 +16,7 @@
             <tr>
                 <td>{{ book.name }}</td>
                 <td>{{ book.author }}</td>
+                <td><a href="{{ path('app_admin_book_show', {'id' : book.id}) }}">Show</a></td>
             </tr>
         </tbody>
         {% endfor %}
