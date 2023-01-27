@@ -1,4 +1,7 @@
 {
+    "babdev/pagerfanta-bundle": {
+        "version": "v3.7.0"
+    },
     "doctrine/annotations": {
         "version": "1.14",
         "recipe": {
@@ -22,6 +25,18 @@
             "src/Repository/.gitignore"
         ]
     },
+    "doctrine/doctrine-fixtures-bundle": {
+        "version": "3.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "3.0",
+            "ref": "1f5514cfa15b947298df4d771e694e578d4c204d"
+        },
+        "files": [
+            "src/DataFixtures/AppFixtures.php"
+        ]
+    },
     "doctrine/doctrine-migrations-bundle": {
         "version": "3.2",
         "recipe": {
@@ -34,6 +49,33 @@
             "config/packages/doctrine_migrations.yaml",
             "migrations/.gitignore"
         ]
+    },
+    "friendsofsymfony/rest-bundle": {
+        "version": "3.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "2.2",
+            "ref": "fa845143b7e0a4c70aedd1a88c549e6d977e9ae5"
+        },
+        "files": [
+            "config/packages/fos_rest.yaml"
+        ]
+    },
+    "jms/serializer-bundle": {
+        "version": "4.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "4.0",
+            "ref": "cc04e10cf7171525b50c18b36004edf64cb478be"
+        },
+        "files": [
+            "config/packages/jms_serializer.yaml"
+        ]
+    },
+    "knplabs/knp-menu-bundle": {
+        "version": "v3.2.0"
     },
     "phpunit/phpunit": {
         "version": "9.5",
@@ -60,6 +102,57 @@
         "files": [
             "config/packages/sensio_framework_extra.yaml"
         ]
+    },
+    "sonata-project/block-bundle": {
+        "version": "4.19",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "4.11",
+            "ref": "b4edd2a1e6ac1827202f336cac2771cb529de542"
+        },
+        "files": [
+            "config/packages/sonata_block.yaml"
+        ]
+    },
+    "sonata-project/doctrine-extensions": {
+        "version": "2.1",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.8",
+            "ref": "4ea4a4b6730f83239608d7d4c849533645c70169"
+        }
+    },
+    "sonata-project/form-extensions": {
+        "version": "1.18",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.4",
+            "ref": "9c8a1e8ce2b1f215015ed16652c4ed18eb5867fd"
+        },
+        "files": [
+            "config/packages/sonata_form.yaml"
+        ]
+    },
+    "sylius/grid-bundle": {
+        "version": "v1.12.0"
+    },
+    "sylius/resource-bundle": {
+        "version": "1.10",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.6",
+            "ref": "bfd4306c8e26b4aed0790ebde89a2c949e1398a2"
+        },
+        "files": [
+            "config/packages/sylius_resource.yaml"
+        ]
+    },
+    "sylius/ui-bundle": {
+        "version": "v1.12.3"
     },
     "symfony/console": {
         "version": "6.1",
@@ -276,7 +369,53 @@
             "config/packages/messenger.yaml"
         ]
     },
+    "symfony/webpack-encore-bundle": {
+        "version": "1.16",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "1.10",
+            "ref": "f8fc53f1942f76679e9ee3c25fd44865355707b5"
+        },
+        "files": [
+            "assets/app.js",
+            "assets/bootstrap.js",
+            "assets/controllers.json",
+            "assets/controllers/hello_controller.js",
+            "assets/styles/app.css",
+            "config/packages/webpack_encore.yaml",
+            "package.json",
+            "webpack.config.js"
+        ]
+    },
     "twig/extra-bundle": {
         "version": "v3.5.0"
+    },
+    "willdurand/hateoas-bundle": {
+        "version": "2.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "2.0",
+            "ref": "34df072c6edaa61ae19afb2f3a239f272fecab87"
+        },
+        "files": [
+            "config/packages/bazinga_hateoas.yaml"
+        ]
+    },
+    "winzou/state-machine-bundle": {
+        "version": "0.6.0"
+    },
+    "zenstruck/foundry": {
+        "version": "1.28",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "1.10",
+            "ref": "37c2f894cc098ab4c08874b80cccc8e2f8de7976"
+        },
+        "files": [
+            "config/packages/zenstruck_foundry.yaml"
+        ]
     }
 }
