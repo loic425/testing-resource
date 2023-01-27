@@ -32,6 +32,12 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
+    app.repository.book:
+        class: App\Repository\BookRepository
+
+    App\State\Provider\CollectionProvider:
+        $locator: !tagged_locator { tag: 'sylius.repository' }
+
     Sylius\Component\Resource\Context\Initiator\RequestContextInitiator: null
 
     Sylius\Component\Resource\Metadata\Operation\HttpOperationInitiator: null
@@ -55,6 +61,3 @@ services:
     Sylius\Component\Resource\Symfony\Request\State\ItemProvider:
         arguments:
             $locator: !tagged_locator { tag: 'sylius.repository' }
-
-    app.repository.book:
-        class: App\Repository\BookRepository

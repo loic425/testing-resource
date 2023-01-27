@@ -3,7 +3,9 @@
 namespace App\Entity;
 
 use App\Repository\BookRepository;
-use App\State\Responder\BookResponder;
+use App\State\Provider\CollectionProvider;
+use App\State\Responder\BookCollectionResponder;
+use App\State\Responder\BookItemResponder;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Sylius\Component\Resource\Metadata\Index;
@@ -17,11 +19,16 @@ use Sylius\Component\Resource\Symfony\Request\State\ItemProvider;
     alias: 'app.book',
     section: 'admin',
     operations: [
-        new Index(template: 'book/index.html.twig'),
+        new Index(
+            template: 'book/index.html.twig',
+            provider: CollectionProvider::class,
+            responder: BookCollectionResponder::class,
+            repository: 'app.repository.book',
+        ),
         new Show(
             template: 'book/show.html.twig',
             provider: ItemProvider::class,
-            responder: BookResponder::class,
+            responder: BookItemResponder::class,
             repository: 'app.repository.book',
         ),
     ],

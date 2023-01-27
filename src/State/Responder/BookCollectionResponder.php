@@ -11,7 +11,7 @@ use Sylius\Component\Resource\State\ResponderInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;
 
-final class BookResponder implements ResponderInterface
+final class BookCollectionResponder implements ResponderInterface
 {
 
     public function __construct(private Environment $twig)
@@ -20,6 +20,6 @@ final class BookResponder implements ResponderInterface
 
     public function respond(mixed $data, Operation $operation, Context $context): Response
     {
-        return new Response($this->twig->render($operation->getTemplate(), ['book' => $data]));
+        return new Response($this->twig->render($operation->getTemplate(), ['books' => $data]));
     }
 }
