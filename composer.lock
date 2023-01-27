@@ -3742,12 +3742,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/loic425/SyliusResourceBundle.git",
-                "reference": "2e0407bb87e064b0a1ebfd3a814a8b987f9381a2"
+                "reference": "ad46d50cadc236c06f72d4eeecb6a9f2751217b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/2e0407bb87e064b0a1ebfd3a814a8b987f9381a2",
-                "reference": "2e0407bb87e064b0a1ebfd3a814a8b987f9381a2",
+                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/ad46d50cadc236c06f72d4eeecb6a9f2751217b2",
+                "reference": "ad46d50cadc236c06f72d4eeecb6a9f2751217b2",
                 "shasum": ""
             },
             "require": {
@@ -3867,7 +3867,7 @@
             "support": {
                 "source": "https://github.com/loic425/SyliusResourceBundle/tree/feature/item-provider"
             },
-            "time": "2023-01-27T08:37:35+00:00"
+            "time": "2023-01-27T09:43:38+00:00"
         },
         {
             "name": "sylius/ui",
