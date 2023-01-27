@@ -29,32 +29,27 @@ use Sylius\Component\Resource\Symfony\Request\State\Provider;
             template: 'book/index.html.twig',
             provider: Provider::class,
             responder: BookCollectionResponder::class,
-            repository: 'app.repository.book',
         ),
         new Create(
             template: 'book/create.html.twig',
             provider: Provider::class,
             responder: BookCreationResponder::class,
-            repository: 'app.repository.book',
             formType: BookType::class,
         ),
         new Update(
             template: 'book/update.html.twig',
             provider: Provider::class,
             responder: BookEditionResponder::class,
-            repository: 'app.repository.book',
             formType: BookType::class,
         ),
         new Delete(
             provider: Provider::class,
             responder: BookDeleteResponder::class,
-            repository: 'app.repository.book',
         ),
         new Show(
             template: 'book/show.html.twig',
             provider: Provider::class,
             responder: BookItemResponder::class,
-            repository: 'app.repository.book',
         ),
     ],
 )]
