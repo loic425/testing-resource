@@ -3,6 +3,18 @@
 {% block body %}
     <h1>Books</h1>
 
+    <form method="GET">
+        <label for="criteria_name">Name</label>
+        <input type="text" id="criteria_name" name="criteria[name]" value="{{ app.request.query.all('criteria')['name']|default('') }}" />
+        <label for="criteria_author">Author</label>
+        <input type="text" id="criteria_author" name="criteria[author]" value="{{ app.request.query.all('criteria')['author']|default('') }}" />
+        <button type="submit">Search</button>
+    </form>
+
+    <a href="{{ path('app_admin_book_index') }}">Reset</a>
+
+    <br />
+
     <table>
         <thead>
             <tr>
@@ -21,4 +33,10 @@
         </tbody>
         {% endfor %}
     </table>
+
+    <br />
+
+    {% if books.haveToPaginate() %}
+        {{ pagerfanta(books, 'twig', options|default({'template': '@BabDevPagerfanta/default.html.twig'})) }}
+    {% endif %}
 {% endblock %}
