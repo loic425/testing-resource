@@ -5,10 +5,11 @@ namespace App\Entity;
 use App\Form\BookType;
 use App\Repository\BookRepository;
 use App\State\Processor\CreateBookProcessor;
+use App\State\Processor\DeleteBookProcessor;
 use App\State\Processor\UpdateBookProcessor;
 use App\State\Responder\BookCollectionResponder;
 use App\State\Responder\CreateBookResponder;
-use App\State\Responder\BookDeleteResponder;
+use App\State\Responder\DeleteBookResponder;
 use App\State\Responder\UpdateBookResponder;
 use App\State\Responder\BookItemResponder;
 use Doctrine\DBAL\Types\Types;
@@ -46,7 +47,8 @@ use Sylius\Component\Resource\Symfony\Request\State\Provider;
         ),
         new Delete(
             provider: Provider::class,
-            responder: BookDeleteResponder::class,
+            processor: DeleteBookProcessor::class,
+            responder: DeleteBookResponder::class,
         ),
         new Show(
             template: 'book/show.html.twig',
