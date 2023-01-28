@@ -5,7 +5,6 @@ declare(strict_types=1);
 
 namespace App\State\Responder;
 
-use Doctrine\ORM\EntityManagerInterface;
 use Sylius\Component\Resource\Context\Context;
 use Sylius\Component\Resource\Context\Option\RequestOption;
 use Sylius\Component\Resource\Metadata\Operation;
@@ -16,12 +15,11 @@ use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;
 use Webmozart\Assert\Assert;
 
-final class BookCreationResponder implements ResponderInterface
+final class UpdateBookResponder implements ResponderInterface
 {
 
     public function __construct(
         private Environment $twig,
-        private EntityManagerInterface $entityManager,
     ) {
     }
 
@@ -35,11 +33,6 @@ final class BookCreationResponder implements ResponderInterface
         Assert::notNull($form, 'Form was not found but it should');
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $book = $form->getData();
-
-            $this->entityManager->persist($book);
-            $this->entityManager->flush();
-
             return new RedirectResponse('/books');
         }
 

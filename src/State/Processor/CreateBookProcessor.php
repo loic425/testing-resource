@@ -1,31 +1,25 @@
 <?php
 
-
 declare(strict_types=1);
 
-namespace App\State\Responder;
+namespace App\State\Processor;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Sylius\Component\Resource\Context\Context;
 use Sylius\Component\Resource\Context\Option\RequestOption;
 use Sylius\Component\Resource\Metadata\Operation;
-use Sylius\Component\Resource\State\ResponderInterface;
+use Sylius\Component\Resource\State\ProcessorInterface;
 use Symfony\Component\Form\FormInterface;
-use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpFoundation\Response;
-use Twig\Environment;
 use Webmozart\Assert\Assert;
 
-final class BookEditionResponder implements ResponderInterface
+final class CreateBookProcessor implements ProcessorInterface
 {
-
     public function __construct(
-        private Environment $twig,
         private EntityManagerInterface $entityManager,
     ) {
     }
 
-    public function respond(mixed $data, Operation $operation, Context $context): Response
+    public function process(mixed $data, Operation $operation, Context $context): mixed
     {
         $request = $context->get(RequestOption::class)?->request();
         Assert::notNull($request);
@@ -35,14 +29,12 @@ final class BookEditionResponder implements ResponderInterface
         Assert::notNull($form, 'Form was not found but it should');
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->entityManager->flush();
+            $book = $form->getData();
 
-            return new RedirectResponse('/books');
+            $this->entityManager->persist($book);
+            $this->entityManager->flush();
         }
 
-        return new Response($this->twig->render($operation->getTemplate(), [
-            'book' => $data,
-            'form' => $form->createView(),
-        ]));
+        return null;
     }
 }

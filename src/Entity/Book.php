@@ -4,10 +4,12 @@ namespace App\Entity;
 
 use App\Form\BookType;
 use App\Repository\BookRepository;
+use App\State\Processor\CreateBookProcessor;
+use App\State\Processor\UpdateBookProcessor;
 use App\State\Responder\BookCollectionResponder;
-use App\State\Responder\BookCreationResponder;
+use App\State\Responder\CreateBookResponder;
 use App\State\Responder\BookDeleteResponder;
-use App\State\Responder\BookEditionResponder;
+use App\State\Responder\UpdateBookResponder;
 use App\State\Responder\BookItemResponder;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
@@ -33,12 +35,14 @@ use Sylius\Component\Resource\Symfony\Request\State\Provider;
         new Create(
             template: 'book/create.html.twig',
             provider: Provider::class,
-            responder: BookCreationResponder::class,
+            processor: CreateBookProcessor::class,
+            responder: CreateBookResponder::class,
         ),
         new Update(
             template: 'book/update.html.twig',
             provider: Provider::class,
-            responder: BookEditionResponder::class,
+            processor: UpdateBookProcessor::class,
+            responder: UpdateBookResponder::class,
         ),
         new Delete(
             provider: Provider::class,
