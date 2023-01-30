@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace App\State\Processor;
 
-use Doctrine\ORM\EntityManagerInterface;
 use Sylius\Component\Resource\Context\Context;
 use Sylius\Component\Resource\Context\Option\RequestOption;
-use Sylius\Component\Resource\Doctrine\Common\PersistProcessor;
+use Sylius\Component\Resource\Doctrine\Common\State\PersistProcessor;
 use Sylius\Component\Resource\Metadata\Operation;
 use Sylius\Component\Resource\State\ProcessorInterface;
 use Symfony\Component\Form\FormInterface;
@@ -16,6 +15,7 @@ use Webmozart\Assert\Assert;
 final class UpdateBookProcessor implements ProcessorInterface
 {
     public function __construct(
+
         private PersistProcessor $decorated,
     ) {
     }

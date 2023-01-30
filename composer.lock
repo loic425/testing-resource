@@ -3839,12 +3839,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/loic425/SyliusResourceBundle.git",
-                "reference": "eda3c542d9bc8ef444df2fca3a3467b16c8aa954"
+                "reference": "d85954bb1998c4cdba6ecf057edf3f0615155d01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/eda3c542d9bc8ef444df2fca3a3467b16c8aa954",
-                "reference": "eda3c542d9bc8ef444df2fca3a3467b16c8aa954",
+                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/d85954bb1998c4cdba6ecf057edf3f0615155d01",
+                "reference": "d85954bb1998c4cdba6ecf057edf3f0615155d01",
                 "shasum": ""
             },
             "require": {
@@ -3964,7 +3964,7 @@
             "support": {
                 "source": "https://github.com/loic425/SyliusResourceBundle/tree/feature/doctrine-processor"
             },
-            "time": "2023-01-30T13:22:06+00:00"
+            "time": "2023-01-30T13:44:21+00:00"
         },
         {
             "name": "sylius/ui",

@@ -74,8 +74,8 @@ services:
         arguments:
             $locator: !tagged_locator { tag: 'sylius.repository' }
 
-    Sylius\Component\Resource\Doctrine\Common\PersistProcessor: null
-    Sylius\Component\Resource\Doctrine\Common\RemoveProcessor: null
+    Sylius\Component\Resource\Doctrine\Common\State\PersistProcessor: null
+    Sylius\Component\Resource\Doctrine\Common\State\RemoveProcessor: null
 
     Sylius\Component\Resource\Doctrine\Common\Metadata\Resource\Factory\DoctrineResourceMetadataCollectionFactory:
         decorates: 'sylius.resource_metadata_collection.factory.attributes'
