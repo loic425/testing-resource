@@ -21,7 +21,6 @@ use Sylius\Component\Resource\Metadata\Resource;
 use Sylius\Component\Resource\Metadata\Show;
 use Sylius\Component\Resource\Metadata\Update;
 use Sylius\Component\Resource\Model\ResourceInterface;
-use Sylius\Component\Resource\Symfony\Request\State\Provider;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
 #[Resource(
@@ -31,26 +30,21 @@ use Sylius\Component\Resource\Symfony\Request\State\Provider;
     templatesDir: 'book',
     operations: [
         new Index(
-            provider: Provider::class,
             responder: BookCollectionResponder::class,
         ),
         new Create(
-            provider: Provider::class,
             processor: CreateBookProcessor::class,
             responder: CreateBookResponder::class,
         ),
         new Update(
-            provider: Provider::class,
             processor: UpdateBookProcessor::class,
             responder: UpdateBookResponder::class,
         ),
         new Delete(
-            provider: Provider::class,
             processor: DeleteBookProcessor::class,
             responder: DeleteBookResponder::class,
         ),
         new Show(
-            provider: Provider::class,
             responder: BookItemResponder::class,
         ),
     ],
