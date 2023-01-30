@@ -3839,12 +3839,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/loic425/SyliusResourceBundle.git",
-                "reference": "4fdcd289bfe608a1f3ca35fdbd02cd90be2bd531"
+                "reference": "d5858fd11b50170bd5a1d1162bbb5025753e2514"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/4fdcd289bfe608a1f3ca35fdbd02cd90be2bd531",
-                "reference": "4fdcd289bfe608a1f3ca35fdbd02cd90be2bd531",
+                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/d5858fd11b50170bd5a1d1162bbb5025753e2514",
+                "reference": "d5858fd11b50170bd5a1d1162bbb5025753e2514",
                 "shasum": ""
             },
             "require": {
@@ -3964,7 +3964,7 @@
             "support": {
                 "source": "https://github.com/loic425/SyliusResourceBundle/tree/fix/form-listener"
             },
-            "time": "2023-01-27T16:57:33+00:00"
+            "time": "2023-01-30T08:05:11+00:00"
         },
         {
             "name": "sylius/ui",

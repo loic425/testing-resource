@@ -27,6 +27,7 @@ use Sylius\Component\Resource\Symfony\Request\State\Provider;
 #[Resource(
     alias: 'app.book',
     section: 'admin',
+    formType: BookType::class,
     operations: [
         new Index(
             template: 'book/index.html.twig',
