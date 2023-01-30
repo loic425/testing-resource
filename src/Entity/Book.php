@@ -4,9 +4,6 @@ namespace App\Entity;
 
 use App\Form\BookType;
 use App\Repository\BookRepository;
-use App\State\Processor\CreateBookProcessor;
-use App\State\Processor\DeleteBookProcessor;
-use App\State\Processor\UpdateBookProcessor;
 use App\State\Responder\BookCollectionResponder;
 use App\State\Responder\CreateBookResponder;
 use App\State\Responder\DeleteBookResponder;
@@ -33,11 +30,9 @@ use Sylius\Component\Resource\Model\ResourceInterface;
             responder: BookCollectionResponder::class,
         ),
         new Create(
-            processor: CreateBookProcessor::class,
             responder: CreateBookResponder::class,
         ),
         new Update(
-            processor: UpdateBookProcessor::class,
             responder: UpdateBookResponder::class,
         ),
         new Delete(

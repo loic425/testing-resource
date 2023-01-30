@@ -59,6 +59,9 @@ services:
     Sylius\Component\Resource\Symfony\EventListener\FormListener:
         tags: [ { name: 'kernel.event_listener', event: 'kernel.view', priority: 128 } ]
 
+    Sylius\Component\Resource\Symfony\EventListener\ValidateListener:
+        tags: [ { name: 'kernel.event_listener', event: 'kernel.view', priority: 64 } ]
+
     Sylius\Component\Resource\Symfony\EventListener\WriteListener:
         tags: [ { name: 'kernel.event_listener', event: 'kernel.view', priority: 32 } ]
 
