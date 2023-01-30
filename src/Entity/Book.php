@@ -28,20 +28,18 @@ use Sylius\Component\Resource\Symfony\Request\State\Provider;
     alias: 'app.book',
     section: 'admin',
     formType: BookType::class,
+    templatesDir: 'book',
     operations: [
         new Index(
-            template: 'book/index.html.twig',
             provider: Provider::class,
             responder: BookCollectionResponder::class,
         ),
         new Create(
-            template: 'book/create.html.twig',
             provider: Provider::class,
             processor: CreateBookProcessor::class,
             responder: CreateBookResponder::class,
         ),
         new Update(
-            template: 'book/update.html.twig',
             provider: Provider::class,
             processor: UpdateBookProcessor::class,
             responder: UpdateBookResponder::class,
@@ -52,7 +50,6 @@ use Sylius\Component\Resource\Symfony\Request\State\Provider;
             responder: DeleteBookResponder::class,
         ),
         new Show(
-            template: 'book/show.html.twig',
             provider: Provider::class,
             responder: BookItemResponder::class,
         ),
