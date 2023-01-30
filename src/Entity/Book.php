@@ -41,7 +41,6 @@ use Sylius\Component\Resource\Model\ResourceInterface;
             responder: UpdateBookResponder::class,
         ),
         new Delete(
-            processor: DeleteBookProcessor::class,
             responder: DeleteBookResponder::class,
         ),
         new Show(

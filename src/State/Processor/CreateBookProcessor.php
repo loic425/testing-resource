@@ -7,6 +7,7 @@ namespace App\State\Processor;
 use Doctrine\ORM\EntityManagerInterface;
 use Sylius\Component\Resource\Context\Context;
 use Sylius\Component\Resource\Context\Option\RequestOption;
+use Sylius\Component\Resource\Doctrine\Common\PersistProcessor;
 use Sylius\Component\Resource\Metadata\Operation;
 use Sylius\Component\Resource\State\ProcessorInterface;
 use Symfony\Component\Form\FormInterface;
@@ -15,7 +16,7 @@ use Webmozart\Assert\Assert;
 final class CreateBookProcessor implements ProcessorInterface
 {
     public function __construct(
-        private EntityManagerInterface $entityManager,
+        private PersistProcessor $decorated,
     ) {
     }
 
@@ -31,8 +32,7 @@ final class CreateBookProcessor implements ProcessorInterface
         if ($form->isSubmitted() && $form->isValid()) {
             $book = $form->getData();
 
-            $this->entityManager->persist($book);
-            $this->entityManager->flush();
+            $this->decorated->process($book, $operation, $context);
         }
 
         return null;

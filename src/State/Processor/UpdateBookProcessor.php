@@ -7,6 +7,7 @@ namespace App\State\Processor;
 use Doctrine\ORM\EntityManagerInterface;
 use Sylius\Component\Resource\Context\Context;
 use Sylius\Component\Resource\Context\Option\RequestOption;
+use Sylius\Component\Resource\Doctrine\Common\PersistProcessor;
 use Sylius\Component\Resource\Metadata\Operation;
 use Sylius\Component\Resource\State\ProcessorInterface;
 use Symfony\Component\Form\FormInterface;
@@ -15,7 +16,7 @@ use Webmozart\Assert\Assert;
 final class UpdateBookProcessor implements ProcessorInterface
 {
     public function __construct(
-        private EntityManagerInterface $entityManager,
+        private PersistProcessor $decorated,
     ) {
     }
 
@@ -29,7 +30,7 @@ final class UpdateBookProcessor implements ProcessorInterface
         Assert::notNull($form, 'Form was not found but it should');
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->entityManager->flush();
+            return $this->decorated->process($data, $operation, $context);
         }
 
         return null;
