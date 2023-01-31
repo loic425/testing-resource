@@ -77,6 +77,10 @@ services:
         arguments:
             $locator: !tagged_locator { tag: 'sylius.repository' }
 
+    Sylius\Component\Resource\Symfony\Request\State\TwigResponder: null
+
+    Sylius\Component\Resource\Symfony\Routing\RedirectHandler: null
+
     Sylius\Component\Resource\Doctrine\Common\State\PersistProcessor: null
     Sylius\Component\Resource\Doctrine\Common\State\RemoveProcessor: null
 

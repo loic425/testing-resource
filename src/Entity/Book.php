@@ -18,6 +18,7 @@ use Sylius\Component\Resource\Metadata\Resource;
 use Sylius\Component\Resource\Metadata\Show;
 use Sylius\Component\Resource\Metadata\Update;
 use Sylius\Component\Resource\Model\ResourceInterface;
+use Sylius\Component\Resource\Symfony\Request\State\TwigResponder;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
 #[Resource(
@@ -27,19 +28,22 @@ use Sylius\Component\Resource\Model\ResourceInterface;
     templatesDir: 'book',
     operations: [
         new Index(
-            responder: BookCollectionResponder::class,
+            responder: TwigResponder::class,
         ),
         new Create(
-            responder: CreateBookResponder::class,
+            responder: TwigResponder::class,
+            redirectToRoute: 'app_admin_book_index',
         ),
         new Update(
-            responder: UpdateBookResponder::class,
+            responder: TwigResponder::class,
+            redirectToRoute: 'app_admin_book_index',
         ),
         new Delete(
-            responder: DeleteBookResponder::class,
+            responder: TwigResponder::class,
+            redirectToRoute: 'app_admin_book_index',
         ),
         new Show(
-            responder: BookItemResponder::class,
+            responder: TwigResponder::class,
         ),
     ],
 )]
