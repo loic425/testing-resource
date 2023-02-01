@@ -80,6 +80,7 @@ services:
     Sylius\Component\Resource\Symfony\Request\State\TwigResponder: null
 
     Sylius\Component\Resource\Symfony\Routing\RedirectHandler: null
+    Sylius\Component\Resource\Symfony\Routing\Factory\OperationRouteNameFactory: null
 
     Sylius\Component\Resource\Doctrine\Common\State\PersistProcessor: null
     Sylius\Component\Resource\Doctrine\Common\State\RemoveProcessor: null
@@ -88,3 +89,10 @@ services:
         decorates: 'sylius.resource_metadata_collection.factory.attributes'
         arguments:
             $decorated: '@.inner'
+
+    Sylius\Component\Resource\Metadata\Resource\Factory\RedirectResourceMetadataCollectionFactory:
+        decorates: 'sylius.resource_metadata_collection.factory.attributes'
+        arguments:
+            $decorated: '@.inner'
+
+

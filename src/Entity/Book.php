@@ -27,11 +27,9 @@ use Sylius\Component\Resource\Symfony\Request\State\TwigResponder;
         ),
         new Create(
             responder: TwigResponder::class,
-            redirectToRoute: 'app_admin_book_index',
         ),
         new Update(
             responder: TwigResponder::class,
-            redirectToRoute: 'app_admin_book_index',
         ),
         new Delete(
             responder: TwigResponder::class,

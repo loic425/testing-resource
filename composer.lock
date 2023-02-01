@@ -3839,12 +3839,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/loic425/SyliusResourceBundle.git",
-                "reference": "807cd60f7cc2c8cfa913ef5414e7d46f81f6c3ad"
+                "reference": "bed046d609f824fb7a819561373719b7a2bdb394"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/807cd60f7cc2c8cfa913ef5414e7d46f81f6c3ad",
-                "reference": "807cd60f7cc2c8cfa913ef5414e7d46f81f6c3ad",
+                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/bed046d609f824fb7a819561373719b7a2bdb394",
+                "reference": "bed046d609f824fb7a819561373719b7a2bdb394",
                 "shasum": ""
             },
             "require": {
@@ -3964,7 +3964,7 @@
             "support": {
                 "source": "https://github.com/loic425/SyliusResourceBundle/tree/feature/twig-responder"
             },
-            "time": "2023-02-01T15:07:36+00:00"
+            "time": "2023-02-01T20:37:48+00:00"
         },
         {
             "name": "sylius/ui",
