@@ -22,22 +22,11 @@ use Sylius\Component\Resource\Symfony\Request\State\TwigResponder;
     formType: BookType::class,
     templatesDir: 'book',
     operations: [
-        new Index(
-            responder: TwigResponder::class,
-        ),
-        new Create(
-            responder: TwigResponder::class,
-        ),
-        new Update(
-            responder: TwigResponder::class,
-        ),
-        new Delete(
-            responder: TwigResponder::class,
-            // redirectToRoute: 'app_admin_book_index',
-        ),
-        new Show(
-            responder: TwigResponder::class,
-        ),
+        new Index(),
+        new Create(),
+        new Update(),
+        new Delete(),
+        new Show(),
     ],
 )]
 class Book implements ResourceInterface
