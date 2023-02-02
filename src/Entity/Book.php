@@ -33,7 +33,7 @@ use Sylius\Component\Resource\Symfony\Request\State\TwigResponder;
         ),
         new Delete(
             responder: TwigResponder::class,
-            redirectToRoute: 'app_admin_book_index',
+            // redirectToRoute: 'app_admin_book_index',
         ),
         new Show(
             responder: TwigResponder::class,
