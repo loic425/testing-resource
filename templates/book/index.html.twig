@@ -18,11 +18,11 @@
         <button type="submit">Search</button>
     </form>
 
-    <a href="{{ path('app_admin_book_index') }}">Reset</a>
+    <a href="{{ path('app_book_index') }}">Reset</a>
 
     <hr />
 
-    <a href="{{ path('app_admin_book_create') }}">Create</a>
+    <a href="{{ path('app_book_create') }}">Create</a>
 
     <table>
         <thead>
@@ -38,9 +38,9 @@
                 <td>{{ book.name }}</td>
                 <td>{{ book.author }}</td>
                 <td>
-                    <a href="{{ path('app_admin_book_show', {'id' : book.id}) }}">Show</a>
-                    <a href="{{ path('app_admin_book_update', {'id' : book.id}) }}">Edit</a>
-                    <form method="POST" action="{{ path('app_admin_book_delete', {'id': book.id}) }}">
+                    <a href="{{ path('app_book_show', {'id' : book.id}) }}">Show</a>
+                    <a href="{{ path('app_book_update', {'id' : book.id}) }}">Edit</a>
+                    <form method="POST" action="{{ path('app_book_delete', {'id': book.id}) }}">
                         <input type="hidden" name="_method" value="DELETE" />
                         <input type="submit" value="Delete" />
                     </form>

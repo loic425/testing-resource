@@ -19,15 +19,14 @@ use Sylius\Component\Resource\Symfony\Request\State\TwigResponder;
 #[ORM\Entity(repositoryClass: BookRepository::class)]
 #[Resource(
     alias: 'app.book',
-    section: 'admin',
     formType: BookType::class,
-    templatesDir: 'book',
+    templatesDir: '@SyliusAdminUi/crud',
     operations: [
-        new Index(provider: RequestGridProvider::class, grid: 'app_book'),
+        new Index(template: 'book/index.html.twig', provider: RequestGridProvider::class, grid: 'app_book'),
         new Create(),
         new Update(),
         new Delete(),
-        new Show(),
+        new Show(template: 'book/show.html.twig'),
     ],
 )]
 class Book implements ResourceInterface

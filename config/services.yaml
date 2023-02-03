@@ -46,6 +46,11 @@ services:
     Sylius\Component\Resource\Grid\View\Factory\GridViewFactoryInterface: '@Sylius\Component\Resource\Grid\View\Factory\GridViewFactory'
 
     Sylius\Component\Resource\Context\Initiator\RequestContextInitiator: null
+    Sylius\Component\Resource\Context\Initiator\RequestContextInitiatorInterface: '@Sylius\Component\Resource\Context\Initiator\RequestContextInitiator'
+    Sylius\Bundle\ResourceBundle\Context\Initiator\LegacyRequestContextInitiator:
+        decorates: 'Sylius\Component\Resource\Context\Initiator\RequestContextInitiator'
+        arguments:
+            $decorated: '@.inner'
 
     Sylius\Component\Resource\Metadata\Operation\HttpOperationInitiator: null
 
@@ -103,4 +108,14 @@ services:
         arguments:
             $decorated: '@.inner'
 
+    Sylius\Component\Resource\Twig\Context\Factory\ContextFactory: null
+    Sylius\Component\Resource\Twig\Context\Factory\ContextFactoryInterface: '@Sylius\Component\Resource\Twig\Context\Factory\ContextFactory'
+    Sylius\Component\Resource\Twig\Context\Factory\RequestContextFactory:
+        decorates: 'Sylius\Component\Resource\Twig\Context\Factory\ContextFactory'
+        arguments:
+            $decorated: '@.inner'
 
+    Sylius\Bundle\ResourceBundle\Twig\Context\LegacyContextFactory:
+        decorates: 'Sylius\Component\Resource\Twig\Context\Factory\ContextFactory'
+        arguments:
+            $decorated: '@.inner'
