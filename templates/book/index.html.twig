@@ -6,6 +6,8 @@
 {% endblock %}
 
 {% block body %}
+    {% set books = books.data|default(books) %}
+
     <h1>Books</h1>
 
     <form method="GET">

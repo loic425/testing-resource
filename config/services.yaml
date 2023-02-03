@@ -37,6 +37,14 @@ services:
     app.repository.book:
         class: App\Repository\BookRepository
 
+    Sylius\Component\Grid\Data\DataProviderInterface: '@sylius.grid.data_provider'
+    Sylius\Component\Grid\Provider\GridProviderInterface: '@sylius.grid.chain_provider'
+
+    Sylius\Component\Resource\Grid\State\RequestGridProvider: null
+
+    Sylius\Component\Resource\Grid\View\Factory\GridViewFactory: null
+    Sylius\Component\Resource\Grid\View\Factory\GridViewFactoryInterface: '@Sylius\Component\Resource\Grid\View\Factory\GridViewFactory'
+
     Sylius\Component\Resource\Context\Initiator\RequestContextInitiator: null
 
     Sylius\Component\Resource\Metadata\Operation\HttpOperationInitiator: null
