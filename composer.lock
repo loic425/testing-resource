@@ -1358,16 +1358,16 @@
         },
         {
             "name": "doctrine/persistence",
-            "version": "2.5.6",
+            "version": "2.5.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/persistence.git",
-                "reference": "7729fc2a7e5efc8bbfa408a3b8adeb8f5b84f5d1"
+                "reference": "e36f22765f4d10a7748228babbf73da5edfeed3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/persistence/zipball/7729fc2a7e5efc8bbfa408a3b8adeb8f5b84f5d1",
-                "reference": "7729fc2a7e5efc8bbfa408a3b8adeb8f5b84f5d1",
+                "url": "https://api.github.com/repos/doctrine/persistence/zipball/e36f22765f4d10a7748228babbf73da5edfeed3c",
+                "reference": "e36f22765f4d10a7748228babbf73da5edfeed3c",
                 "shasum": ""
             },
             "require": {
@@ -1440,7 +1440,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/persistence/issues",
-                "source": "https://github.com/doctrine/persistence/tree/2.5.6"
+                "source": "https://github.com/doctrine/persistence/tree/2.5.7"
             },
             "funding": [
                 {
@@ -1456,7 +1456,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-01T18:11:10+00:00"
+            "time": "2023-02-03T15:51:16+00:00"
         },
         {
             "name": "doctrine/sql-formatter",
@@ -3972,12 +3972,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:loic425/sylius-ui.git",
-                "reference": "493acffa4fcaa0afc03180d7a898b1ada4945b4d"
+                "reference": "63fa943b9a63ed477b4aace21e5d3efb66f78113"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/sylius-ui/zipball/493acffa4fcaa0afc03180d7a898b1ada4945b4d",
-                "reference": "493acffa4fcaa0afc03180d7a898b1ada4945b4d",
+                "url": "https://api.github.com/repos/loic425/sylius-ui/zipball/63fa943b9a63ed477b4aace21e5d3efb66f78113",
+                "reference": "63fa943b9a63ed477b4aace21e5d3efb66f78113",
                 "shasum": ""
             },
             "require": {
@@ -4057,7 +4057,7 @@
                 "source": "https://github.com/loic425/sylius-ui/tree/main",
                 "issues": "https://github.com/loic425/sylius-ui/issues"
             },
-            "time": "2022-11-29T09:01:14+00:00"
+            "time": "2023-02-03T16:20:40+00:00"
         },
         {
             "name": "sylius/ui-bundle",
