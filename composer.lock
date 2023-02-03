@@ -3839,12 +3839,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/loic425/SyliusResourceBundle.git",
-                "reference": "ec275ae78bef7f858c7302ca914355d5cc38ad30"
+                "reference": "84dd06dde915ff2b0f1158080751ee2f06d4a627"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/ec275ae78bef7f858c7302ca914355d5cc38ad30",
-                "reference": "ec275ae78bef7f858c7302ca914355d5cc38ad30",
+                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/84dd06dde915ff2b0f1158080751ee2f06d4a627",
+                "reference": "84dd06dde915ff2b0f1158080751ee2f06d4a627",
                 "shasum": ""
             },
             "require": {
@@ -3964,7 +3964,7 @@
             "support": {
                 "source": "https://github.com/loic425/SyliusResourceBundle/tree/feature/twig-context-factory"
             },
-            "time": "2023-02-03T14:14:03+00:00"
+            "time": "2023-02-03T14:44:33+00:00"
         },
         {
             "name": "sylius/ui",

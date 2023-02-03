@@ -44,6 +44,8 @@ services:
 
     Sylius\Component\Resource\Grid\View\Factory\GridViewFactory: null
     Sylius\Component\Resource\Grid\View\Factory\GridViewFactoryInterface: '@Sylius\Component\Resource\Grid\View\Factory\GridViewFactory'
+    Sylius\Bundle\ResourceBundle\Grid\View\LegacyGridViewFactory:
+        decorates: 'Sylius\Component\Resource\Grid\View\Factory\GridViewFactory'
 
     Sylius\Component\Resource\Context\Initiator\RequestContextInitiator: null
     Sylius\Component\Resource\Context\Initiator\RequestContextInitiatorInterface: '@Sylius\Component\Resource\Context\Initiator\RequestContextInitiator'

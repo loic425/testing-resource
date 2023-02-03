@@ -14,7 +14,6 @@ use Sylius\Component\Resource\Metadata\Resource;
 use Sylius\Component\Resource\Metadata\Show;
 use Sylius\Component\Resource\Metadata\Update;
 use Sylius\Component\Resource\Model\ResourceInterface;
-use Sylius\Component\Resource\Symfony\Request\State\TwigResponder;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
 #[Resource(
@@ -22,7 +21,7 @@ use Sylius\Component\Resource\Symfony\Request\State\TwigResponder;
     formType: BookType::class,
     templatesDir: '@SyliusAdminUi/crud',
     operations: [
-        new Index(template: 'book/index.html.twig', provider: RequestGridProvider::class, grid: 'app_book'),
+        new Index(provider: RequestGridProvider::class, grid: 'app_book'),
         new Create(),
         new Update(),
         new Delete(),

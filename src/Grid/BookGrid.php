@@ -60,11 +60,11 @@ final class BookGrid extends AbstractGrid implements ResourceAwareGridInterface
                     DeleteAction::create()
                 )
             )
-            ->addActionGroup(
-                BulkActionGroup::create(
-                    DeleteAction::create()
-                )
-            )
+//            ->addActionGroup(
+//                BulkActionGroup::create(
+//                    DeleteAction::create()
+//                )
+//            )
         ;
     }
 
