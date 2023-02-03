@@ -16,7 +16,7 @@
         "phpdocumentor/reflection-docblock": "^5.3",
         "phpstan/phpdoc-parser": "^1.15",
         "sensio/framework-extra-bundle": "^6.1",
-        "sylius/resource-bundle": "dev-feature/configure-default-responder ",
+        "sylius/resource-bundle": "dev-feature/current-page",
         "sylius/ui": "dev-main",
         "sylius/ui-bundle": "^1.12",
         "symfony/asset": "6.1.*",
