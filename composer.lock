@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "20c08cc5dfcd68d5da04a742d03e3db0",
+    "content-hash": "15f56d23cdeafa2194e05cc0f320a698",
     "packages": [
         {
             "name": "babdev/pagerfanta-bundle",
@@ -3835,16 +3835,16 @@
         },
         {
             "name": "sylius/resource-bundle",
-            "version": "dev-feature/twig-context-factory",
+            "version": "dev-feature/grid-sorting",
             "source": {
                 "type": "git",
                 "url": "https://github.com/loic425/SyliusResourceBundle.git",
-                "reference": "84dd06dde915ff2b0f1158080751ee2f06d4a627"
+                "reference": "0ecfc39d974c41bb336892fdadfd4fbe084a4172"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/84dd06dde915ff2b0f1158080751ee2f06d4a627",
-                "reference": "84dd06dde915ff2b0f1158080751ee2f06d4a627",
+                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/0ecfc39d974c41bb336892fdadfd4fbe084a4172",
+                "reference": "0ecfc39d974c41bb336892fdadfd4fbe084a4172",
                 "shasum": ""
             },
             "require": {
@@ -3962,9 +3962,9 @@
                 "sylius"
             ],
             "support": {
-                "source": "https://github.com/loic425/SyliusResourceBundle/tree/feature/twig-context-factory"
+                "source": "https://github.com/loic425/SyliusResourceBundle/tree/feature/grid-sorting"
             },
-            "time": "2023-02-03T14:44:33+00:00"
+            "time": "2023-02-03T15:25:48+00:00"
         },
         {
             "name": "sylius/ui",

@@ -13,6 +13,7 @@ use Sylius\Bundle\GridBundle\Builder\ActionGroup\MainActionGroup;
 use Sylius\Bundle\GridBundle\Builder\Field\DateTimeField;
 use Sylius\Bundle\GridBundle\Builder\Field\StringField;
 use Sylius\Bundle\GridBundle\Builder\Field\TwigField;
+use Sylius\Bundle\GridBundle\Builder\Filter\StringFilter;
 use Sylius\Bundle\GridBundle\Builder\GridBuilderInterface;
 use Sylius\Bundle\GridBundle\Grid\ResourceAwareGridInterface;
 use Sylius\Bundle\GridBundle\Grid\AbstractGrid;
@@ -32,7 +33,10 @@ final class BookGrid extends AbstractGrid implements ResourceAwareGridInterface
     public function buildGrid(GridBuilderInterface $gridBuilder): void
     {
         $gridBuilder
-            // see https://github.com/Sylius/SyliusGridBundle/blob/master/docs/field_types.md
+            ->orderBy('name', 'asc')
+            ->addFilter(
+                StringFilter::create('search', ['name', 'author'])
+            )
             ->addField(
                 StringField::create('name')
                     ->setLabel('Name')
