@@ -18,6 +18,7 @@ use Sylius\Component\Resource\Model\ResourceInterface;
 #[ORM\Entity(repositoryClass: BookRepository::class)]
 #[Resource(
     alias: 'app.book',
+    section: 'admin',
     formType: BookType::class,
     templatesDir: '@SyliusAdminUi/crud',
     operations: [

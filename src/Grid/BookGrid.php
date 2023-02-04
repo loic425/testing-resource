@@ -36,20 +36,21 @@ final class BookGrid extends AbstractGrid implements ResourceAwareGridInterface
             ->orderBy('name', 'asc')
             ->addFilter(
                 StringFilter::create('search', ['name', 'author'])
+                    ->setLabel('sylius.ui.search')
             )
             ->addField(
                 StringField::create('name')
-                    ->setLabel('Name')
+                    ->setLabel('sylius.ui.name')
                     ->setSortable(true)
             )
             ->addField(
                 StringField::create('author')
-                    ->setLabel('Author')
+                    ->setLabel('sylius.ui.author')
                     ->setSortable(true)
             )
             ->addField(
                 StringField::create('description')
-                    ->setLabel('Description')
+                    ->setLabel('sylius.ui.description')
                     ->setSortable(true)
             )
             ->addActionGroup(
