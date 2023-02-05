@@ -3839,12 +3839,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/loic425/SyliusResourceBundle.git",
-                "reference": "baea276cc10459bd7861953287632432ac8aa470"
+                "reference": "27cf27163758f3bcee2327e47f980af6e9970109"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/baea276cc10459bd7861953287632432ac8aa470",
-                "reference": "baea276cc10459bd7861953287632432ac8aa470",
+                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/27cf27163758f3bcee2327e47f980af6e9970109",
+                "reference": "27cf27163758f3bcee2327e47f980af6e9970109",
                 "shasum": ""
             },
             "require": {
@@ -3964,7 +3964,7 @@
             "support": {
                 "source": "https://github.com/loic425/SyliusResourceBundle/tree/fix/operation-route-factory"
             },
-            "time": "2023-02-04T14:02:09+00:00"
+            "time": "2023-02-05T19:11:57+00:00"
         },
         {
             "name": "sylius/ui",
