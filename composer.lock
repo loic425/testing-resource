@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "092f1c4cd5c542d255b4632becb4859f",
+    "content-hash": "cc41e44500445dfaa4cd831e6b31e0b2",
     "packages": [
         {
             "name": "babdev/pagerfanta-bundle",
@@ -3835,16 +3835,16 @@
         },
         {
             "name": "sylius/resource-bundle",
-            "version": "dev-fix/operation-route-factory",
+            "version": "dev-feature/di",
             "source": {
                 "type": "git",
                 "url": "https://github.com/loic425/SyliusResourceBundle.git",
-                "reference": "27cf27163758f3bcee2327e47f980af6e9970109"
+                "reference": "cbbe3cc7071f982f4d6c4c2ef4053c636151d438"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/27cf27163758f3bcee2327e47f980af6e9970109",
-                "reference": "27cf27163758f3bcee2327e47f980af6e9970109",
+                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/cbbe3cc7071f982f4d6c4c2ef4053c636151d438",
+                "reference": "cbbe3cc7071f982f4d6c4c2ef4053c636151d438",
                 "shasum": ""
             },
             "require": {
@@ -3962,9 +3962,9 @@
                 "sylius"
             ],
             "support": {
-                "source": "https://github.com/loic425/SyliusResourceBundle/tree/fix/operation-route-factory"
+                "source": "https://github.com/loic425/SyliusResourceBundle/tree/feature/di"
             },
-            "time": "2023-02-05T19:11:57+00:00"
+            "time": "2023-02-07T08:16:54+00:00"
         },
         {
             "name": "sylius/ui",
