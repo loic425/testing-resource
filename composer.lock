@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc41e44500445dfaa4cd831e6b31e0b2",
+    "content-hash": "d9f005f15fdd55e81cc4098060b0bd57",
     "packages": [
         {
             "name": "babdev/pagerfanta-bundle",
@@ -3835,16 +3835,16 @@
         },
         {
             "name": "sylius/resource-bundle",
-            "version": "dev-feature/di",
+            "version": "dev-test-phpunit",
             "source": {
                 "type": "git",
                 "url": "https://github.com/loic425/SyliusResourceBundle.git",
-                "reference": "cbbe3cc7071f982f4d6c4c2ef4053c636151d438"
+                "reference": "ec55933c09b595e3b756d40aa207c1301477e5b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/cbbe3cc7071f982f4d6c4c2ef4053c636151d438",
-                "reference": "cbbe3cc7071f982f4d6c4c2ef4053c636151d438",
+                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/ec55933c09b595e3b756d40aa207c1301477e5b3",
+                "reference": "ec55933c09b595e3b756d40aa207c1301477e5b3",
                 "shasum": ""
             },
             "require": {
@@ -3895,6 +3895,8 @@
                 "sylius/grid-bundle": "^1.7 || v1.12.0-ALPHA.1",
                 "symfony/dependency-injection": "^5.4 || ^6.0",
                 "symfony/dotenv": "^5.4 || ^6.0",
+                "symfony/messenger": "^5.4 || ^6.0",
+                "symfony/uid": "^5.4 || ^6.0",
                 "symfony/workflow": "^5.4 || ^6.0",
                 "twig/twig": "^2.12 || ^3.0",
                 "vimeo/psalm": "^4.22"
@@ -3962,9 +3964,9 @@
                 "sylius"
             ],
             "support": {
-                "source": "https://github.com/loic425/SyliusResourceBundle/tree/feature/di"
+                "source": "https://github.com/loic425/SyliusResourceBundle/tree/test-phpunit"
             },
-            "time": "2023-02-07T08:16:54+00:00"
+            "time": "2023-02-09T15:57:45+00:00"
         },
         {
             "name": "sylius/ui",

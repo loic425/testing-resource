@@ -14,6 +14,7 @@ use Sylius\Component\Resource\Metadata\Resource;
 use Sylius\Component\Resource\Metadata\Show;
 use Sylius\Component\Resource\Metadata\Update;
 use Sylius\Component\Resource\Model\ResourceInterface;
+use Symfony\Component\Validator\Constraints\NotBlank;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
 #[Resource(
@@ -37,9 +38,11 @@ class Book implements ResourceInterface
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[NotBlank]
     private ?string $name = null;
 
     #[ORM\Column(length: 255)]
+    #[NotBlank]
     private ?string $author = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
