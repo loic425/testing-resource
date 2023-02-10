@@ -6,7 +6,6 @@ use App\Form\BookType;
 use App\Repository\BookRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use Sylius\Component\Resource\Grid\State\RequestGridProvider;
 use Sylius\Component\Resource\Metadata\Create;
 use Sylius\Component\Resource\Metadata\Delete;
 use Sylius\Component\Resource\Metadata\Index;
@@ -24,7 +23,7 @@ use Symfony\Component\Validator\Constraints\NotBlank;
     templatesDir: '@SyliusAdminUi/crud',
     routePrefix: '/admin',
     operations: [
-        new Index(provider: RequestGridProvider::class, grid: 'app_book'),
+        new Index(grid: 'app_book'),
         new Create(),
         new Update(),
         new Delete(),
