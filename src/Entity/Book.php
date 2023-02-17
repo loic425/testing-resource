@@ -6,6 +6,8 @@ use App\Form\BookType;
 use App\Repository\BookRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Sylius\Component\Resource\Annotation\SyliusCrudRoutes;
+use Sylius\Component\Resource\Metadata\BulkDelete;
 use Sylius\Component\Resource\Metadata\Create;
 use Sylius\Component\Resource\Metadata\Delete;
 use Sylius\Component\Resource\Metadata\Index;
@@ -26,9 +28,17 @@ use Symfony\Component\Validator\Constraints\NotBlank;
         new Index(grid: 'app_book'),
         new Create(),
         new Update(),
+        new BulkDelete(repositoryMethod: 'findById'),
         new Delete(),
         new Show(template: 'book/show.html.twig'),
     ],
+)]
+#[SyliusCrudRoutes(
+    alias: 'app.book',
+    path: 'legacy/books',
+    section: 'legacy',
+    templates: '@SyliusAdminUi/crud',
+    grid: 'app_book',
 )]
 class Book implements ResourceInterface
 {
