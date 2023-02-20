@@ -28,7 +28,7 @@ use Symfony\Component\Validator\Constraints\NotBlank;
         new Index(grid: 'app_book'),
         new Create(),
         new Update(),
-        new BulkDelete(repositoryMethod: 'findById'),
+        new BulkDelete(),
         new Delete(),
         new Show(template: 'book/show.html.twig'),
     ],

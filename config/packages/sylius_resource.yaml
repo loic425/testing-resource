@@ -8,3 +8,6 @@ sylius_resource:
         app.book:
             classes:
                 model: App\Entity\Book
+        app.subscription:
+            classes:
+                model: App\Entity\Subscription

@@ -37,5 +37,8 @@ services:
     app.repository.book:
         class: App\Repository\BookRepository
 
+    App\Menu\AdminMenuBuilder:
+        decorates: 'Sylius\AdminUi\Menu\MenuBuilderInterface'
+
     Sylius\Component\Grid\Data\DataProviderInterface: '@sylius.grid.data_provider'
     Sylius\Component\Grid\Provider\GridProviderInterface: '@sylius.grid.chain_provider'
