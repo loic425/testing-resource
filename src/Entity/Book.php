@@ -7,6 +7,7 @@ use App\Repository\BookRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Sylius\Component\Resource\Annotation\SyliusCrudRoutes;
+use Sylius\Component\Resource\Annotation\SyliusRoute;
 use Sylius\Component\Resource\Metadata\BulkDelete;
 use Sylius\Component\Resource\Metadata\Create;
 use Sylius\Component\Resource\Metadata\Delete;
@@ -39,6 +40,13 @@ use Symfony\Component\Validator\Constraints\NotBlank;
     section: 'legacy',
     templates: '@SyliusAdminUi/crud',
     grid: 'app_book',
+)]
+#[SyliusRoute(
+    name: 'app_legacy_book_show',
+    path: '/legacy/books/{id}',
+    controller: 'app.controller.book::showAction',
+    template: 'book/show.html.twig',
+    section: 'legacy',
 )]
 class Book implements ResourceInterface
 {
