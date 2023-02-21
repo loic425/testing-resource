@@ -50,11 +50,11 @@ final class SubscriptionGrid extends AbstractGrid implements ResourceAwareGridIn
                     DeleteAction::create()
                 )
             )
-            ->addActionGroup(
-                BulkActionGroup::create(
-                    DeleteAction::create()
-                )
-            )
+//            ->addActionGroup(
+//                BulkActionGroup::create(
+//                    DeleteAction::create()
+//                )
+//            )
         ;
     }
 

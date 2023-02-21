@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24827e94847c70dec60cbea8ed6146e5",
+    "content-hash": "2f11a429d519498b070b3c394b9ef2bc",
     "packages": [
         {
             "name": "babdev/pagerfanta-bundle",
@@ -3835,16 +3835,16 @@
         },
         {
             "name": "sylius/resource-bundle",
-            "version": "dev-feature/bulk-delete",
+            "version": "dev-feature/add-flash-helper",
             "source": {
                 "type": "git",
                 "url": "https://github.com/loic425/SyliusResourceBundle.git",
-                "reference": "5473e6f29fb52f9c926d59452df32e8ec180838f"
+                "reference": "b27d9ca6ded29e997a68e54823a6e11ad1bb0e47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/5473e6f29fb52f9c926d59452df32e8ec180838f",
-                "reference": "5473e6f29fb52f9c926d59452df32e8ec180838f",
+                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/b27d9ca6ded29e997a68e54823a6e11ad1bb0e47",
+                "reference": "b27d9ca6ded29e997a68e54823a6e11ad1bb0e47",
                 "shasum": ""
             },
             "require": {
@@ -3964,9 +3964,9 @@
                 "sylius"
             ],
             "support": {
-                "source": "https://github.com/loic425/SyliusResourceBundle/tree/feature/bulk-delete"
+                "source": "https://github.com/loic425/SyliusResourceBundle/tree/feature/add-flash-helper"
             },
-            "time": "2023-02-17T16:44:15+00:00"
+            "time": "2023-02-21T11:37:00+00:00"
         },
         {
             "name": "sylius/ui",

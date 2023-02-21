@@ -25,7 +25,7 @@ use Symfony\Component\Uid\Uuid;
         new Index(grid: 'app_subscription'),
         new Create(),
         new Update(),
-        new BulkDelete(),
+        //new BulkDelete(),
         new Delete(),
     ],
 )]

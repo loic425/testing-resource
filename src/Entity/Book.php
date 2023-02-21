@@ -26,9 +26,9 @@ use Symfony\Component\Validator\Constraints\NotBlank;
     routePrefix: '/admin',
     operations: [
         new Index(grid: 'app_book'),
-        new Create(),
-        new Update(),
-        new BulkDelete(),
+        new Create(redirectToRoute: 'app_admin_book_update'),
+        new Update(redirectToRoute: 'app_admin_book_update'),
+        //new BulkDelete(),
         new Delete(),
         new Show(template: 'book/show.html.twig'),
     ],
