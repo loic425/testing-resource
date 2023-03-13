@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f11a429d519498b070b3c394b9ef2bc",
+    "content-hash": "a3cf244b007c3c4c233fcd3cf48011d6",
     "packages": [
         {
             "name": "babdev/pagerfanta-bundle",
@@ -3835,16 +3835,16 @@
         },
         {
             "name": "sylius/resource-bundle",
-            "version": "dev-feature/add-flash-helper",
+            "version": "dev-poc-new-resource-metadata",
             "source": {
                 "type": "git",
-                "url": "https://github.com/loic425/SyliusResourceBundle.git",
-                "reference": "b27d9ca6ded29e997a68e54823a6e11ad1bb0e47"
+                "url": "https://github.com/Sylius/SyliusResourceBundle.git",
+                "reference": "711b7787f85202fdbd8f35c0c0989241878519e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/b27d9ca6ded29e997a68e54823a6e11ad1bb0e47",
-                "reference": "b27d9ca6ded29e997a68e54823a6e11ad1bb0e47",
+                "url": "https://api.github.com/repos/Sylius/SyliusResourceBundle/zipball/711b7787f85202fdbd8f35c0c0989241878519e9",
+                "reference": "711b7787f85202fdbd8f35c0c0989241878519e9",
                 "shasum": ""
             },
             "require": {
@@ -3913,31 +3913,11 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Sylius\\Bundle\\ResourceBundle\\": "src/Bundle/",
-                    "Sylius\\Component\\Resource\\": "src/Component/"
+                    "Sylius\\Component\\Resource\\": "src/Component/",
+                    "Sylius\\Bundle\\ResourceBundle\\": "src/Bundle/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Sylius\\Bundle\\ResourceBundle\\spec\\": "src/Bundle/spec/",
-                    "Sylius\\Component\\Resource\\spec\\": "src/Component/spec/",
-                    "App\\": "src/Bundle/test/src/"
-                }
-            },
-            "scripts": {
-                "analyse": [
-                    "@composer validate --strict",
-                    "vendor/bin/ecs check src",
-                    "vendor/bin/phpstan analyse --ansi --memory-limit=256M -c phpstan.neon -l max src"
-                ],
-                "fix": [
-                    "vendor/bin/ecs check src --fix"
-                ],
-                "test": [
-                    "vendor/bin/phpspec run --ansi --no-interaction",
-                    "vendor/bin/phpunit --colors=always"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3964,9 +3944,10 @@
                 "sylius"
             ],
             "support": {
-                "source": "https://github.com/loic425/SyliusResourceBundle/tree/feature/add-flash-helper"
+                "issues": "https://github.com/Sylius/SyliusResourceBundle/issues",
+                "source": "https://github.com/Sylius/SyliusResourceBundle/tree/poc-new-resource-metadata"
             },
-            "time": "2023-02-21T11:37:00+00:00"
+            "time": "2023-03-09T23:02:44+00:00"
         },
         {
             "name": "sylius/ui",
