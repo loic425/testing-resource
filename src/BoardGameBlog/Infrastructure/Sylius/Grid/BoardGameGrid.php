@@ -15,6 +15,7 @@ namespace App\BoardGameBlog\Infrastructure\Sylius\Grid;
 
 use App\BoardGameBlog\Infrastructure\Sylius\Grid\DataProvider\BoardGameGridProvider;
 use App\BoardGameBlog\Infrastructure\Sylius\Resource\BoardGameResource;
+use App\Shared\Infrastructure\Sylius\Grid\AbstractGrid;
 use Sylius\Bundle\GridBundle\Builder\Field\StringField;
 use Sylius\Bundle\GridBundle\Builder\GridBuilderInterface;
 use Sylius\Bundle\GridBundle\Grid\ResourceAwareGridInterface;

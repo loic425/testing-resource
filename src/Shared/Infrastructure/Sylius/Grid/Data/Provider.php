@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace App\BoardGameBlog\Infrastructure\Sylius\Grid\Data;
+namespace App\Shared\Infrastructure\Sylius\Grid\Data;
 
 use Psr\Container\ContainerInterface;
 use Sylius\Component\Grid\Data\DataProviderInterface;

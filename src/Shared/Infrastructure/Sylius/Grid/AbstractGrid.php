@@ -11,9 +11,9 @@
 
 declare(strict_types=1);
 
-namespace App\BoardGameBlog\Infrastructure\Sylius\Grid;
+namespace App\Shared\Infrastructure\Sylius\Grid;
 
-use App\BoardGameBlog\Infrastructure\Sylius\Grid\Builder\GridBuilder;
+use App\Shared\Infrastructure\Sylius\Grid\Builder\GridBuilder;
 use Sylius\Bundle\GridBundle\Builder\GridBuilderInterface;
 use Sylius\Bundle\GridBundle\Grid\GridInterface;
 use Sylius\Bundle\GridBundle\Grid\ResourceAwareGridInterface;

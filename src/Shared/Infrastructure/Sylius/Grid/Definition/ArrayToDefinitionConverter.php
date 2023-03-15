@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace App\BoardGameBlog\Infrastructure\Sylius\Grid\Definition;
+namespace App\Shared\Infrastructure\Sylius\Grid\Definition;
 
 use Sylius\Component\Grid\Definition\Action;
 use Sylius\Component\Grid\Definition\ActionGroup;

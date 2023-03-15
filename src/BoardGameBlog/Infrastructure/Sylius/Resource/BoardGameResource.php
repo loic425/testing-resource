@@ -20,7 +20,7 @@ use Sylius\Component\Resource\Model\ResourceInterface;
 #[Resource(
     alias: 'app.board_game',
     section: 'admin',
-    templatesDir: '@SyliusAdminUi/Crud',
+    templatesDir: '@SyliusAdminUi/crud',
     routePrefix: '/admin',
 )]
 #[Index(grid: 'app_board_game')]

@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace App\BoardGameBlog\Infrastructure\Sylius\Grid\Builder;
+namespace App\Shared\Infrastructure\Sylius\Grid\Builder;
 
 use Sylius\Bundle\GridBundle\Builder\Action\ActionInterface;
 use Sylius\Bundle\GridBundle\Builder\ActionGroup\ActionGroup;

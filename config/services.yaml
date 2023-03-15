@@ -38,13 +38,12 @@ services:
     App\Menu\AdminMenuBuilder:
         decorates: 'Sylius\AdminUi\Menu\MenuBuilderInterface'
 
-    App\BoardGameBlog\Infrastructure\Sylius\Grid\Data\Provider:
+    App\Shared\Infrastructure\Sylius\Grid\Data\Provider:
         decorates: 'sylius.grid.data_provider'
         arguments:
             $locator: !tagged_locator { tag: 'sylius.grid_data_provider' }
             $decorated: '@.inner'
 
-    sylius.grid.array_to_definition_converter: '@App\BoardGameBlog\Infrastructure\Sylius\Grid\Definition\ArrayToDefinitionConverter'
+    sylius.grid.array_to_definition_converter: '@App\Shared\Infrastructure\Sylius\Grid\Definition\ArrayToDefinitionConverter'
     Sylius\Component\Grid\Data\DataProviderInterface: '@sylius.grid.data_provider'
-    Sylius\Component\Grid\Definition\ArrayToDefinitionConverterInterface: '@App\BoardGameBlog\Infrastructure\Sylius\Grid\Definition\ArrayToDefinitionConverter'
     Sylius\Component\Grid\Provider\GridProviderInterface: '@sylius.grid.chain_provider'
