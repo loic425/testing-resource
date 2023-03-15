@@ -42,6 +42,10 @@ final class AdminMenuBuilder implements MenuBuilderInterface
         $library->addChild('backend_pet', ['route' => 'app_admin_book_index'])
             ->setLabel('app.ui.books')
             ->setLabelAttribute('icon', 'book');
+
+        $library->addChild('backend_board_game', ['route' => 'app_admin_board_game_index'])
+            ->setLabel('app.ui.board_games')
+            ->setLabelAttribute('icon', 'puzzle');
     }
 
     private function addConfigurationSubMenu(ItemInterface $menu): void
