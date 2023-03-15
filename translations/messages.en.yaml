@@ -1,5 +1,6 @@
 app:
     ui:
+        board_games: Board Games
         edit_book: Edit book
         edit_subscription: Edit subscription
         books: Books

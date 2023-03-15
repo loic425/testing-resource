@@ -3,8 +3,17 @@ sylius_resource:
     # Override default settings
     #settings:
 
+    mapping:
+        paths:
+            - '%kernel.project_dir%/src/Entity'
+            - '%kernel.project_dir%/src/BoardGameBlog/Infrastructure/Sylius/Resource'
+
     # Configure your resources
     resources:
+        app.board_game:
+            driver: false
+            classes:
+                model: App\BoardGameBlog\Infrastructure\Sylius\Resource\BoardGameResource
         app.book:
             classes:
                 model: App\Entity\Book
