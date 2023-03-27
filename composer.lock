@@ -3839,12 +3839,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sylius/SyliusResourceBundle.git",
-                "reference": "711b7787f85202fdbd8f35c0c0989241878519e9"
+                "reference": "3106eaea1f92437ed45a8daae29cff7a73d89a34"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Sylius/SyliusResourceBundle/zipball/711b7787f85202fdbd8f35c0c0989241878519e9",
-                "reference": "711b7787f85202fdbd8f35c0c0989241878519e9",
+                "url": "https://api.github.com/repos/Sylius/SyliusResourceBundle/zipball/3106eaea1f92437ed45a8daae29cff7a73d89a34",
+                "reference": "3106eaea1f92437ed45a8daae29cff7a73d89a34",
                 "shasum": ""
             },
             "require": {
@@ -3873,6 +3873,7 @@
                 "symfony/yaml": "^5.4 || ^6.0",
                 "webmozart/assert": "^1.8",
                 "willdurand/hateoas-bundle": "^2.0",
+                "willdurand/negotiation": "^3.1",
                 "winzou/state-machine-bundle": "^0.6"
             },
             "replace": {
@@ -3896,6 +3897,7 @@
                 "symfony/dependency-injection": "^5.4 || ^6.0",
                 "symfony/dotenv": "^5.4 || ^6.0",
                 "symfony/messenger": "^5.4 || ^6.0",
+                "symfony/serializer": "^5.4 || ^6.0",
                 "symfony/uid": "^5.4 || ^6.0",
                 "symfony/workflow": "^5.4 || ^6.0",
                 "twig/twig": "^2.12 || ^3.0",
@@ -3947,7 +3949,7 @@
                 "issues": "https://github.com/Sylius/SyliusResourceBundle/issues",
                 "source": "https://github.com/Sylius/SyliusResourceBundle/tree/poc-new-resource-metadata"
             },
-            "time": "2023-03-09T23:02:44+00:00"
+            "time": "2023-03-24T22:09:32+00:00"
         },
         {
             "name": "sylius/ui",

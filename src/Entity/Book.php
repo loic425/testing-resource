@@ -29,7 +29,7 @@ use Symfony\Component\Validator\Constraints\NotBlank;
         new Index(grid: 'app_book'),
         new Create(redirectToRoute: 'app_admin_book_update'),
         new Update(redirectToRoute: 'app_admin_book_update'),
-        //new BulkDelete(),
+        new BulkDelete(),
         new Delete(),
         new Show(template: 'book/show.html.twig'),
     ],
