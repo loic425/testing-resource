@@ -14,9 +14,3 @@ sylius_resource:
             driver: false
             classes:
                 model: App\BoardGameBlog\Infrastructure\Sylius\Resource\BoardGameResource
-        app.book:
-            classes:
-                model: App\Entity\Book
-        app.subscription:
-            classes:
-                model: App\Entity\Subscription
