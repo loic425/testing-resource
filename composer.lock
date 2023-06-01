@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a3cf244b007c3c4c233fcd3cf48011d6",
+    "content-hash": "fcf43b6c1905c218936eb7ef4d99178f",
     "packages": [
         {
             "name": "babdev/pagerfanta-bundle",
@@ -3835,16 +3835,16 @@
         },
         {
             "name": "sylius/resource-bundle",
-            "version": "dev-poc-new-resource-metadata",
+            "version": "dev-feature/bulk_update",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Sylius/SyliusResourceBundle.git",
-                "reference": "ed14316a5ee0e4951e1ca320058206d4b2d1245d"
+                "url": "https://github.com/loic425/SyliusResourceBundle.git",
+                "reference": "f31b2bf0d9aa7013524cdef5f2731ff4a53ea390"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Sylius/SyliusResourceBundle/zipball/ed14316a5ee0e4951e1ca320058206d4b2d1245d",
-                "reference": "ed14316a5ee0e4951e1ca320058206d4b2d1245d",
+                "url": "https://api.github.com/repos/loic425/SyliusResourceBundle/zipball/f31b2bf0d9aa7013524cdef5f2731ff4a53ea390",
+                "reference": "f31b2bf0d9aa7013524cdef5f2731ff4a53ea390",
                 "shasum": ""
             },
             "require": {
@@ -3917,11 +3917,31 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Sylius\\Component\\Resource\\": "src/Component/",
-                    "Sylius\\Bundle\\ResourceBundle\\": "src/Bundle/"
+                    "Sylius\\Bundle\\ResourceBundle\\": "src/Bundle/",
+                    "Sylius\\Component\\Resource\\": "src/Component/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Sylius\\Bundle\\ResourceBundle\\spec\\": "src/Bundle/spec/",
+                    "Sylius\\Component\\Resource\\spec\\": "src/Component/spec/",
+                    "App\\": "src/Bundle/test/src/"
+                }
+            },
+            "scripts": {
+                "analyse": [
+                    "@composer validate --strict",
+                    "vendor/bin/ecs check src",
+                    "vendor/bin/phpstan analyse --ansi --memory-limit=256M -c phpstan.neon -l max src"
+                ],
+                "fix": [
+                    "vendor/bin/ecs check src --fix"
+                ],
+                "test": [
+                    "vendor/bin/phpspec run --ansi --no-interaction",
+                    "vendor/bin/phpunit --colors=always"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -3948,10 +3968,9 @@
                 "sylius"
             ],
             "support": {
-                "issues": "https://github.com/Sylius/SyliusResourceBundle/issues",
-                "source": "https://github.com/Sylius/SyliusResourceBundle/tree/poc-new-resource-metadata"
+                "source": "https://github.com/loic425/SyliusResourceBundle/tree/feature/bulk_update"
             },
-            "time": "2023-04-07T13:19:05+00:00"
+            "time": "2023-06-01T07:53:27+00:00"
         },
         {
             "name": "sylius/ui",
@@ -3959,12 +3978,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:loic425/sylius-ui.git",
-                "reference": "63fa943b9a63ed477b4aace21e5d3efb66f78113"
+                "reference": "ded07b6def117708753a83c92d8603640c52e8c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loic425/sylius-ui/zipball/63fa943b9a63ed477b4aace21e5d3efb66f78113",
-                "reference": "63fa943b9a63ed477b4aace21e5d3efb66f78113",
+                "url": "https://api.github.com/repos/loic425/sylius-ui/zipball/ded07b6def117708753a83c92d8603640c52e8c7",
+                "reference": "ded07b6def117708753a83c92d8603640c52e8c7",
                 "shasum": ""
             },
             "require": {
@@ -4044,7 +4063,7 @@
                 "source": "https://github.com/loic425/sylius-ui/tree/main",
                 "issues": "https://github.com/loic425/sylius-ui/issues"
             },
-            "time": "2023-02-03T16:20:40+00:00"
+            "time": "2023-05-31T08:59:03+00:00"
         },
         {
             "name": "sylius/ui-bundle",
@@ -9286,6 +9305,90 @@
                 }
             ],
             "time": "2023-01-18T19:37:55+00:00"
+        },
+        {
+            "name": "symfony/workflow",
+            "version": "v6.1.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/workflow.git",
+                "reference": "94b2c3dbdd16ca317e8afbd8e3450328e968768f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/workflow/zipball/94b2c3dbdd16ca317e8afbd8e3450328e968768f",
+                "reference": "94b2c3dbdd16ca317e8afbd8e3450328e968768f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "conflict": {
+                "symfony/event-dispatcher": "<5.4"
+            },
+            "require-dev": {
+                "psr/log": "^1|^2|^3",
+                "symfony/dependency-injection": "^5.4|^6.0",
+                "symfony/event-dispatcher": "^5.4|^6.0",
+                "symfony/expression-language": "^5.4|^6.0",
+                "symfony/security-core": "^5.4|^6.0",
+                "symfony/validator": "^5.4|^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Workflow\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Grégoire Pineau",
+                    "email": "lyrixx@lyrixx.info"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides tools for managing a workflow or finite state machine",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "petrinet",
+                "place",
+                "state",
+                "statemachine",
+                "transition",
+                "workflow"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/workflow/tree/v6.1.11"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-01-01T08:36:55+00:00"
         },
         {
             "name": "symfony/yaml",

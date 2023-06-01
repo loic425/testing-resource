@@ -3,6 +3,7 @@
 namespace App\Grid;
 
 use App\Entity\Book;
+use Sylius\Bundle\GridBundle\Builder\Action\Action;
 use Sylius\Bundle\GridBundle\Builder\Action\CreateAction;
 use Sylius\Bundle\GridBundle\Builder\Action\DeleteAction;
 use Sylius\Bundle\GridBundle\Builder\Action\ShowAction;
@@ -20,11 +21,6 @@ use Sylius\Bundle\GridBundle\Grid\AbstractGrid;
 
 final class BookGrid extends AbstractGrid implements ResourceAwareGridInterface
 {
-    public function __construct()
-    {
-        // TODO inject services if required
-    }
-
     public static function getName(): string
     {
         return 'app_book';
@@ -34,10 +30,10 @@ final class BookGrid extends AbstractGrid implements ResourceAwareGridInterface
     {
         $gridBuilder
             ->orderBy('name', 'asc')
-            ->addFilter(
-                StringFilter::create('search', ['name', 'author'])
-                    ->setLabel('sylius.ui.search')
-            )
+//            ->addFilter(
+//                StringFilter::create('search', ['name', 'author'])
+//                    ->setLabel('sylius.ui.search')
+//            )
             ->addField(
                 StringField::create('name')
                     ->setLabel('sylius.ui.name')
@@ -49,9 +45,9 @@ final class BookGrid extends AbstractGrid implements ResourceAwareGridInterface
                     ->setSortable(true)
             )
             ->addField(
-                StringField::create('description')
-                    ->setLabel('sylius.ui.description')
-                    ->setSortable(true)
+                TwigField::create('state', '@SyliusUi/Grid/Field/state.html.twig')
+                    ->setLabel('sylius.ui.state')
+                    ->setOption('vars', ['labels' => 'admin/book/label/state']),
             )
             ->addActionGroup(
                 MainActionGroup::create(
@@ -62,12 +58,35 @@ final class BookGrid extends AbstractGrid implements ResourceAwareGridInterface
                 ItemActionGroup::create(
                     // ShowAction::create(),
                     UpdateAction::create(),
-                    DeleteAction::create()
+                    Action::create('publish', 'apply_transition')
+                        ->setLabel('app.ui.publish')
+                        ->setIcon('icon: checkmark')
+                        ->setOptions([
+                            'link' => [
+                                'route' => 'app_admin_book_publish',
+                                'parameters' => [
+                                    'id' => 'resource.id',
+                                ],
+                            ],
+                            'class' => 'green',
+                            'transition' => 'publish',
+                        ]),
+                    DeleteAction::create(),
                 )
             )
             ->addActionGroup(
                 BulkActionGroup::create(
-                    DeleteAction::create()
+                    DeleteAction::create(),
+                    Action::create('publish', 'apply_transition')
+                        ->setLabel('app.ui.publish')
+                        ->setIcon('icon: checkmark')
+                        ->setOptions([
+                            'link' => [
+                                'route' => 'app_admin_book_bulk_publish',
+                            ],
+                            'class' => 'green',
+                            'transition' => 'publish',
+                        ]),
                 )
             )
         ;

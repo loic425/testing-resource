@@ -7,4 +7,9 @@ app:
         library: Library
         new_book: New book
         new_subscription: New subscription
+        publish: Publish
         subscriptions: Subscriptions
+sylius:
+    ui:
+        draft: Draft
+        published: Published

@@ -1,0 +1,17 @@
+framework:
+    workflows:
+        book_publishing:
+            type: 'state_machine'
+            marking_store:
+                type: 'method'
+                property: 'state'
+            supports:
+                - App\Entity\Book
+            initial_marking: draft
+            places:
+                - draft
+                - published
+            transitions:
+                publish:
+                    from: draft
+                    to: published

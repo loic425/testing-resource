@@ -2,8 +2,11 @@
 
 namespace App\Entity;
 
+use App\BookStates;
 use App\Form\BookType;
 use App\Repository\BookRepository;
+use App\State\Processor\PublishBookProcessor;
+use App\Sylius\Resource\Metadata\BulkUpdate;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Sylius\Component\Resource\Annotation\SyliusCrudRoutes;
@@ -31,6 +34,23 @@ use Symfony\Component\Validator\Constraints\NotBlank;
         new Update(redirectToRoute: 'app_admin_book_update'),
         new BulkDelete(),
         new Delete(),
+        //new ApplyStateMachineTransition(redirectToRoute: 'app_admin_book_update', stateMachineTransition: 'publish'),
+        new Update(
+            methods: ['PUT', 'PATCH'],
+            path: 'books/{id}/publish',
+            shortName: 'publish',
+            processor: PublishBookProcessor::class,
+            validate: false,
+            redirectToRoute: 'app_admin_book_update',
+        ),
+        new BulkUpdate(
+            methods: ['PUT', 'PATCH'],
+            path: 'books/bulk_publish',
+            shortName: 'bulk_publish',
+            processor: PublishBookProcessor::class,
+            validate: false,
+            redirectToRoute: 'app_admin_book_index',
+        ),
         new Show(template: 'book/show.html.twig'),
     ],
 )]
@@ -65,6 +85,9 @@ class Book implements ResourceInterface
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;
+
+    #[ORM\Column]
+    private string $state = BookStates::DRAFT;
 
     public function getId(): ?int
     {
@@ -103,6 +126,18 @@ class Book implements ResourceInterface
     public function setDescription(?string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getState(): string
+    {
+        return $this->state;
+    }
+
+    public function setState(string $state): self
+    {
+        $this->state = $state;
 
         return $this;
     }

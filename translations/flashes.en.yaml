@@ -1,0 +1,4 @@
+sylius:
+    resource:
+        bulk_publish: '%resources% have been successfully published.'
+        publish: '%resource% has been successfully published.'

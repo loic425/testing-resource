@@ -1,0 +1,11 @@
+{% set labeled = true %}
+{% set message = action.label %}
+{% set path = options.link.url|default(path(options.link.route|default(grid.requestConfiguration.getRouteName('bulk_delete')), options.link.parameters|default({}))) %}
+
+<form action="{{ path }}" method="post">
+    <input type="hidden" name="_method" value="PATCH">
+    <button class="ui green {% if labeled %}labeled {% endif %}icon button" type="submit" data-bulk-action-requires-confirmation disabled>
+        <i class="icon check"></i> {{ ((message is empty and labeled) ? 'sylius.ui.delete' : message)|trans }}
+    </button>
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token('bulk_delete') }}" />
+</form>

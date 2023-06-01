@@ -1,7 +1,8 @@
 # @see https://github.com/Sylius/SyliusResourceBundle/blob/master/docs/index.md
 sylius_resource:
     # Override default settings
-    #settings:
+    settings:
+        state_machine_component: symfony
 
     mapping:
         paths:
