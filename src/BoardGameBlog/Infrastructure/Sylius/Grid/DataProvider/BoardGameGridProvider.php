@@ -23,7 +23,7 @@ use Webmozart\Assert\Assert;
 
 final class BoardGameGridProvider implements DataProviderInterface
 {
-    public function __construct(private string $dataDir)
+    public function __construct(private readonly string $dataDir)
     {
     }
 
@@ -36,7 +36,6 @@ final class BoardGameGridProvider implements DataProviderInterface
 
             Assert::notNull($id);
             Assert::notNull($name);
-            Assert::notNull($shortDescription);
 
             $data[] = new BoardGameResource(
                 id: $id,

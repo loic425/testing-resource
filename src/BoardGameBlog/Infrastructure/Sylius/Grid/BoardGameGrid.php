@@ -16,6 +16,10 @@ namespace App\BoardGameBlog\Infrastructure\Sylius\Grid;
 use App\BoardGameBlog\Infrastructure\Sylius\Grid\DataProvider\BoardGameGridProvider;
 use App\BoardGameBlog\Infrastructure\Sylius\Resource\BoardGameResource;
 use App\Shared\Infrastructure\Sylius\Grid\AbstractGrid;
+use Sylius\Bundle\GridBundle\Builder\Action\CreateAction;
+use Sylius\Bundle\GridBundle\Builder\Action\UpdateAction;
+use Sylius\Bundle\GridBundle\Builder\ActionGroup\ItemActionGroup;
+use Sylius\Bundle\GridBundle\Builder\ActionGroup\MainActionGroup;
 use Sylius\Bundle\GridBundle\Builder\Field\StringField;
 use Sylius\Bundle\GridBundle\Builder\GridBuilderInterface;
 use Sylius\Bundle\GridBundle\Grid\ResourceAwareGridInterface;
@@ -38,6 +42,16 @@ final class BoardGameGrid extends AbstractGrid implements ResourceAwareGridInter
             ->addField(
                 StringField::create('shortDescription')
                     ->setLabel('Short Description'),
+            )
+            ->addActionGroup(
+                MainActionGroup::create(
+                    CreateAction::create(),
+                ),
+            )
+            ->addActionGroup(
+                ItemActionGroup::create(
+                    UpdateAction::create(),
+                ),
             )
         ;
     }

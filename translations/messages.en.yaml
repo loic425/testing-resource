@@ -1,10 +1,12 @@
 app:
     ui:
         board_games: Board Games
+        books: Books
+        edit_board_game: Edit board game
         edit_book: Edit book
         edit_subscription: Edit subscription
-        books: Books
         library: Library
+        new_board_game: New board game
         new_book: New book
         new_subscription: New subscription
         publish: Publish
