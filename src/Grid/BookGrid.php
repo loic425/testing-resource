@@ -85,7 +85,6 @@ final class BookGrid extends AbstractGrid implements ResourceAwareGridInterface
                                 'route' => 'app_admin_book_bulk_publish',
                             ],
                             'class' => 'green',
-                            'transition' => 'publish',
                         ]),
                 )
             )

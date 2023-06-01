@@ -6,12 +6,12 @@ use App\BookStates;
 use App\Form\BookType;
 use App\Repository\BookRepository;
 use App\State\Processor\PublishBookProcessor;
-use App\Sylius\Resource\Metadata\BulkUpdate;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Sylius\Component\Resource\Annotation\SyliusCrudRoutes;
 use Sylius\Component\Resource\Annotation\SyliusRoute;
 use Sylius\Component\Resource\Metadata\BulkDelete;
+use Sylius\Component\Resource\Metadata\BulkUpdate;
 use Sylius\Component\Resource\Metadata\Create;
 use Sylius\Component\Resource\Metadata\Delete;
 use Sylius\Component\Resource\Metadata\Index;
@@ -44,8 +44,6 @@ use Symfony\Component\Validator\Constraints\NotBlank;
             redirectToRoute: 'app_admin_book_update',
         ),
         new BulkUpdate(
-            methods: ['PUT', 'PATCH'],
-            path: 'books/bulk_publish',
             shortName: 'bulk_publish',
             processor: PublishBookProcessor::class,
             validate: false,
