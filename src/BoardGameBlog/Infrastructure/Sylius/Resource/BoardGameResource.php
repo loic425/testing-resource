@@ -14,10 +14,12 @@ declare(strict_types=1);
 namespace App\BoardGameBlog\Infrastructure\Sylius\Resource;
 
 use App\BoardGameBlog\Infrastructure\Sylius\State\Processor\CreateBoardGameProcessor;
+use App\BoardGameBlog\Infrastructure\Sylius\State\Processor\DeleteBoardGameProcessor;
 use App\BoardGameBlog\Infrastructure\Sylius\State\Processor\UpdateBoardGameProcessor;
 use App\BoardGameBlog\Infrastructure\Sylius\State\Provider\BoardGameItemProvider;
 use App\BoardGameBlog\Infrastructure\Symfony\Form\BoardGameType;
 use Sylius\Component\Resource\Metadata\Create;
+use Sylius\Component\Resource\Metadata\Delete;
 use Sylius\Component\Resource\Metadata\Index;
 use Sylius\Component\Resource\Metadata\Resource;
 use Sylius\Component\Resource\Metadata\Update;
@@ -38,6 +40,10 @@ use Symfony\Component\Validator\Constraints\NotBlank;
 #[Update(
     provider: BoardGameItemProvider::class,
     processor: UpdateBoardGameProcessor::class,
+)]
+#[Delete(
+    provider: BoardGameItemProvider::class,
+    processor: DeleteBoardGameProcessor::class,
 )]
 final class BoardGameResource implements ResourceInterface
 {

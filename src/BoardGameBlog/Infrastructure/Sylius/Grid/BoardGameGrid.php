@@ -17,6 +17,7 @@ use App\BoardGameBlog\Infrastructure\Sylius\Grid\DataProvider\BoardGameGridProvi
 use App\BoardGameBlog\Infrastructure\Sylius\Resource\BoardGameResource;
 use App\Shared\Infrastructure\Sylius\Grid\AbstractGrid;
 use Sylius\Bundle\GridBundle\Builder\Action\CreateAction;
+use Sylius\Bundle\GridBundle\Builder\Action\DeleteAction;
 use Sylius\Bundle\GridBundle\Builder\Action\UpdateAction;
 use Sylius\Bundle\GridBundle\Builder\ActionGroup\ItemActionGroup;
 use Sylius\Bundle\GridBundle\Builder\ActionGroup\MainActionGroup;
@@ -35,9 +36,11 @@ final class BoardGameGrid extends AbstractGrid implements ResourceAwareGridInter
     {
         $gridBuilder
             ->setProvider(BoardGameGridProvider::class)
+            ->orderBy('name', 'asc')
             ->addField(
                 StringField::create('name')
-                    ->setLabel('Name'),
+                    ->setLabel('Name')
+                    ->setSortable(true),
             )
             ->addField(
                 StringField::create('shortDescription')
@@ -51,6 +54,7 @@ final class BoardGameGrid extends AbstractGrid implements ResourceAwareGridInter
             ->addActionGroup(
                 ItemActionGroup::create(
                     UpdateAction::create(),
+                    DeleteAction::create(),
                 ),
             )
         ;

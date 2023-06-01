@@ -31,8 +31,15 @@ final class BoardGameGridProvider implements DataProviderInterface
     {
         $data = [];
 
-        foreach ($this->getFileData() as $row) {
-            [$id, $name, $shortDescription] = str_getcsv($row);
+        $fileData = $this->getFileData();
+
+        $sorting = $parameters->get('sorting') ?? $grid->getSorting();
+        Assert::isArray($sorting);
+
+        $fileData = $this->sortData($fileData, $sorting);
+
+        foreach ($fileData as $row) {
+            [$id, $name, $shortDescription] = $row;
 
             Assert::notNull($id);
             Assert::notNull($name);
@@ -47,8 +54,31 @@ final class BoardGameGridProvider implements DataProviderInterface
         return new Pagerfanta(new ArrayAdapter($data));
     }
 
+    private function sortData(array $data, array $sorting): array
+    {
+        if ('asc' === ($sorting['name'] ?? null)) {
+            usort($data, [$this, 'sortByNameAsc']);
+        }
+
+        if ('desc' === ($sorting['name'] ?? null)) {
+            usort($data, [$this, 'sortByNameDesc']);
+        }
+
+        return $data;
+    }
+
+    private function sortByNameAsc($a, $b): int
+    {
+        return strcmp($a[1], $b[1]);
+    }
+
+    private function sortByNameDesc($a, $b): int
+    {
+        return strcmp($b[1], $a[1]);
+    }
+
     private function getFileData(): array
     {
-        return file($this->dataDir . '/board_games.csv');
+        return array_map('str_getcsv', file($this->dataDir . '/board_games.csv'));
     }
 }
