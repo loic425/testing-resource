@@ -25,8 +25,8 @@ return [
     Sonata\BlockBundle\SonataBlockBundle::class => ['all' => true],
     Knp\Bundle\MenuBundle\KnpMenuBundle::class => ['all' => true],
     Sylius\Bundle\UiBundle\SyliusUiBundle::class => ['all' => true],
-    Sylius\AdminUi\Symfony\SyliusAdminUiBundle::class => ['all' => true],
-    Sylius\SemanticUi\Symfony\SyliusSemanticUiBundle::class => ['all' => true],
+    Monofony\SyliusAdminUi\Symfony\SyliusAdminUiBundle::class => ['all' => true],
+    Monofony\SyliusSemanticUi\Symfony\SyliusSemanticUiBundle::class => ['all' => true],
     Zenstruck\Foundry\ZenstruckFoundryBundle::class => ['dev' => true, 'test' => true],
     Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle::class => ['dev' => true, 'test' => true],
 ];

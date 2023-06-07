@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace App\Menu;
 
 use Knp\Menu\ItemInterface;
-use Sylius\AdminUi\Menu\MenuBuilderInterface;
+use Monofony\SyliusAdminUi\Menu\MenuBuilderInterface;
 
 final class AdminMenuBuilder implements MenuBuilderInterface
 {

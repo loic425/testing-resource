@@ -33,7 +33,9 @@ use Symfony\Component\Validator\Constraints\NotBlank;
     templatesDir: '@SyliusAdminUi/crud',
     routePrefix: '/admin',
 )]
-#[Index(grid: 'app_board_game')]
+#[Index(
+    grid: 'app_board_game'
+)]
 #[Create(
     processor: CreateBoardGameProcessor::class,
 )]

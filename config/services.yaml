@@ -36,7 +36,7 @@ services:
         class: App\Repository\BookRepository
 
     App\Menu\AdminMenuBuilder:
-        decorates: 'Sylius\AdminUi\Menu\MenuBuilderInterface'
+        decorates: 'Monofony\SyliusAdminUi\Menu\MenuBuilderInterface'
 
     App\Shared\Infrastructure\Sylius\Grid\Data\Provider:
         decorates: 'sylius.grid.data_provider'
