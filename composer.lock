@@ -2245,12 +2245,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Monofony/sylius-ui.git",
-                "reference": "f394b0c22df3b3e3095530bd035eb93b36be2d0d"
+                "reference": "0b0bc89be1a85423960b0cec7f7bee7a2e67e951"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Monofony/sylius-ui/zipball/f394b0c22df3b3e3095530bd035eb93b36be2d0d",
-                "reference": "f394b0c22df3b3e3095530bd035eb93b36be2d0d",
+                "url": "https://api.github.com/repos/Monofony/sylius-ui/zipball/0b0bc89be1a85423960b0cec7f7bee7a2e67e951",
+                "reference": "0b0bc89be1a85423960b0cec7f7bee7a2e67e951",
                 "shasum": ""
             },
             "require": {
@@ -2330,7 +2330,7 @@
                 "source": "https://github.com/Monofony/sylius-ui/tree/main",
                 "issues": "https://github.com/Monofony/sylius-ui/issues"
             },
-            "time": "2023-06-07T13:36:17+00:00"
+            "time": "2023-06-07T14:08:50+00:00"
         },
         {
             "name": "monolog/monolog",
