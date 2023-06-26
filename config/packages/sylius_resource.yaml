@@ -2,6 +2,7 @@
 sylius_resource:
     # Override default settings
     settings:
+        default_templates_dir: '@SyliusAdminUi/crud'
         state_machine_component: symfony
 
     mapping:

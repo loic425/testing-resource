@@ -26,7 +26,6 @@ use Symfony\Component\Validator\Constraints\NotBlank;
     alias: 'app.book',
     section: 'admin',
     formType: BookType::class,
-    templatesDir: '@SyliusAdminUi/crud',
     routePrefix: '/admin',
     operations: [
         new Index(grid: 'app_book'),
