@@ -3,29 +3,28 @@
 namespace App\Entity;
 
 use App\BookStates;
-use App\Form\BookType;
 use App\Repository\BookRepository;
 use App\State\Processor\PublishBookProcessor;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Sylius\Component\Resource\Annotation\SyliusCrudRoutes;
 use Sylius\Component\Resource\Annotation\SyliusRoute;
-use Sylius\Component\Resource\Metadata\BulkDelete;
-use Sylius\Component\Resource\Metadata\BulkUpdate;
-use Sylius\Component\Resource\Metadata\Create;
-use Sylius\Component\Resource\Metadata\Delete;
-use Sylius\Component\Resource\Metadata\Index;
-use Sylius\Component\Resource\Metadata\Resource;
-use Sylius\Component\Resource\Metadata\Show;
-use Sylius\Component\Resource\Metadata\Update;
+use Sylius\Resource\Metadata\AsResource;
+use Sylius\Resource\Metadata\BulkDelete;
+use Sylius\Resource\Metadata\BulkUpdate;
+use Sylius\Resource\Metadata\Create;
+use Sylius\Resource\Metadata\Delete;
+use Sylius\Resource\Metadata\Index;
+use Sylius\Resource\Metadata\Show;
+use Sylius\Resource\Metadata\Update;
 use Sylius\Component\Resource\Model\ResourceInterface;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
 #[ORM\Entity(repositoryClass: BookRepository::class)]
-#[Resource(
+#[AsResource(
     alias: 'app.book',
     section: 'admin',
-    formType: BookType::class,
+    //formType: BookType::class,
     routePrefix: '/admin',
     operations: [
         new Index(grid: 'app_book'),

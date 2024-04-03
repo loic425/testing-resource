@@ -18,15 +18,15 @@ use App\BoardGameBlog\Infrastructure\Sylius\State\Processor\DeleteBoardGameProce
 use App\BoardGameBlog\Infrastructure\Sylius\State\Processor\UpdateBoardGameProcessor;
 use App\BoardGameBlog\Infrastructure\Sylius\State\Provider\BoardGameItemProvider;
 use App\BoardGameBlog\Infrastructure\Symfony\Form\BoardGameType;
-use Sylius\Component\Resource\Metadata\Create;
-use Sylius\Component\Resource\Metadata\Delete;
-use Sylius\Component\Resource\Metadata\Index;
-use Sylius\Component\Resource\Metadata\Resource;
-use Sylius\Component\Resource\Metadata\Update;
-use Sylius\Component\Resource\Model\ResourceInterface;
+use Sylius\Resource\Metadata\AsResource;
+use Sylius\Resource\Metadata\Create;
+use Sylius\Resource\Metadata\Delete;
+use Sylius\Resource\Metadata\Index;
+use Sylius\Resource\Metadata\Update;
+use Sylius\Resource\Model\ResourceInterface;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
-#[Resource(
+#[AsResource(
     alias: 'app.board_game',
     section: 'admin',
     formType: BoardGameType::class,
